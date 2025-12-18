@@ -14,7 +14,7 @@ plugins {
 }
 
 android {
-    namespace = "jp.mokeke.healthquiz"
+    namespace = "jp.mokeke.statisticsquiz"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -28,7 +28,7 @@ android {
 
     defaultConfig {
         // ★ 本番用のベース applicationId（prod は suffix なし）
-        applicationId = "jp.mokeke.healthquiz"
+        applicationId = "jp.mokeke.statisticsquiz"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode

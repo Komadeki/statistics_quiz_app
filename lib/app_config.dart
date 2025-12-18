@@ -30,7 +30,7 @@ class AppConfig {
       case AppEnv.qa:
         return '健康クイズ（QA）';
       case AppEnv.prod:
-        return '高校保健 一問一答';
+        return '統計検定2級 一問一答';
     }
   }
 

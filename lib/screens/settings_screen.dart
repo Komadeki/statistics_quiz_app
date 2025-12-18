@@ -179,7 +179,7 @@ class SettingsScreen extends StatelessWidget {
           scheme: 'mailto',
           path: 'support@example.com',
           query:
-              'subject=${Uri.encodeComponent("高校保健 一問一答：お問い合わせ")}&'
+              'subject=${Uri.encodeComponent("統計検定2級 一問一答：お問い合わせ")}&'
               'body=${Uri.encodeComponent("アプリ: v${info.version} (build ${info.buildNumber})\n内容: ")}',
         );
         await launchUrl(mail);

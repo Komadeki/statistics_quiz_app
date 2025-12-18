@@ -20,10 +20,10 @@ class LicensesAndCreditsScreen extends StatelessWidget {
               ListTile(
                 leading: const Icon(Icons.description),
                 title: const Text('オープンソースライセンス'),
-                subtitle: Text('アプリ：高校保健 一問一答 / $ver'),
+                subtitle: Text('アプリ：統計検定2級 一問一答 / $ver'),
                 onTap: () => showLicensePage(
                   context: context,
-                  applicationName: '高校保健 一問一答',
+                  applicationName: '統計検定2級 一問一答',
                   applicationVersion: snap.hasData
                       ? 'v${snap.data!.version}（build ${snap.data!.buildNumber}）'
                       : null,

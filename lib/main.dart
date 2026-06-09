@@ -88,7 +88,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       navigatorKey: NavService.I.navigatorKey, // ★ これを追加！
-      title: '高校保健一問一答',
+      title: '統計検定2級対策 一問一答',
       locale: const Locale('ja', 'JP'),
       supportedLocales: const [Locale('ja', 'JP'), Locale('en')],
       localizationsDelegates: const [

@@ -1,6 +1,6 @@
 {
-    "name": "health_quiz_app",
-    "short_name": "health_quiz_app",
+    "name": "統計検定2級対策 一問一答",
+    "short_name": "統計2級",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,0 +1,495 @@
+{
+  "id": "s01",
+  "title": "データの要約（記述統計）",
+  "subtitle": "Descriptive Statistics",
+  "isPurchased": false,
+  "units": [
+    {
+      "id": "s01_u01",
+      "title": "1変数データの要約（代表値・散布度）",
+      "unitNo": 1,
+      "cards": [
+        {
+          "question": "1変数データの中心を表す代表値として最も一般的に用いられるものはどれか？",
+          "choices": [
+            "平均値",
+            "分散",
+            "標準偏差",
+            "四分位範囲"
+          ],
+          "answerIndex": 0,
+          "explanation": "平均値はすべての値を用いてデータの中心を表す代表的な指標である。",
+          "tags": [
+            "s01_u01",
+            "代表値",
+            "平均"
+          ],
+          "unitId": "s01_u01",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "データを小さい順に並べたとき中央に位置する値はどれか？",
+          "choices": [
+            "最頻値",
+            "中央値",
+            "平均値",
+            "分散"
+          ],
+          "answerIndex": 1,
+          "explanation": "中央値は順序付けたデータの中央にある値であり、外れ値の影響を受けにくい。",
+          "tags": [
+            "s01_u01",
+            "代表値",
+            "中央値"
+          ],
+          "unitId": "s01_u01",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "データのばらつきを表す指標として適切なものはどれか？",
+          "choices": [
+            "平均値",
+            "中央値",
+            "分散",
+            "最頻値"
+          ],
+          "answerIndex": 2,
+          "explanation": "分散は各データが平均からどの程度離れているかを表す散布度の指標である。",
+          "tags": [
+            "s01_u01",
+            "散布度",
+            "分散"
+          ],
+          "unitId": "s01_u01",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "平均との差を二乗して平均した量を何というか？",
+          "choices": [
+            "標準偏差",
+            "分散",
+            "四分位範囲",
+            "最頻値"
+          ],
+          "answerIndex": 1,
+          "explanation": "分散は平均との差の二乗平均として定義される。",
+          "tags": [
+            "s01_u01",
+            "分散",
+            "定義"
+          ],
+          "unitId": "s01_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "分散の平方根として定義される指標はどれか？",
+          "choices": [
+            "四分位範囲",
+            "分散",
+            "標準偏差",
+            "中央値"
+          ],
+          "answerIndex": 2,
+          "explanation": "標準偏差は分散の平方根であり、元のデータと同じ単位で解釈できる。",
+          "tags": [
+            "s01_u01",
+            "標準偏差",
+            "定義"
+          ],
+          "unitId": "s01_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "四分位範囲はどの値の差で定義されるか？",
+          "choices": [
+            "最大値と最小値",
+            "第3四分位数と第1四分位数",
+            "平均値と中央値",
+            "分散と標準偏差"
+          ],
+          "answerIndex": 1,
+          "explanation": "四分位範囲は第3四分位数から第1四分位数を引いた値であり、中央50%の広がりを表す。",
+          "tags": [
+            "s01_u01",
+            "四分位範囲",
+            "定義"
+          ],
+          "unitId": "s01_u01",
+          "importance": 2,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "次のうち散布度の指標に含まれないものはどれか？",
+          "choices": [
+            "分散",
+            "標準偏差",
+            "中央値",
+            "四分位範囲"
+          ],
+          "answerIndex": 2,
+          "explanation": "中央値はデータの中心を表す代表値であり、散布度の指標ではない。",
+          "tags": [
+            "s01_u01",
+            "代表値",
+            "散布度"
+          ],
+          "unitId": "s01_u01",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "同じ平均値をもつ2つのデータ集合を比較するとき、追加で確認すべき指標として最も適切なのはどれか？",
+          "choices": [
+            "中央値",
+            "分散",
+            "最頻値",
+            "平均値"
+          ],
+          "answerIndex": 1,
+          "explanation": "平均値が同じでも、ばらつきが異なればデータの特徴は異なるため散布度を見る必要がある。",
+          "tags": [
+            "s01_u01",
+            "散布度",
+            "比較"
+          ],
+          "unitId": "s01_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "標準偏差が大きいデータの特徴として適切なのはどれか？",
+          "choices": [
+            "データが平均付近に集中している",
+            "データのばらつきが大きい",
+            "外れ値が必ず存在する",
+            "中央値が平均より大きい"
+          ],
+          "answerIndex": 1,
+          "explanation": "標準偏差が大きいほど、データは平均から広く散らばっている。",
+          "tags": [
+            "s01_u01",
+            "標準偏差",
+            "解釈"
+          ],
+          "unitId": "s01_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "四分位範囲を用いる利点として適切なのはどれか？",
+          "choices": [
+            "平均より常に正確である",
+            "外れ値の影響を受けにくい",
+            "分布の山の数が分かる",
+            "標準偏差を不要にする"
+          ],
+          "answerIndex": 1,
+          "explanation": "四分位範囲は中央50%の範囲を見るため、極端な値の影響を受けにくい。",
+          "tags": [
+            "s01_u01",
+            "四分位範囲",
+            "外れ値"
+          ],
+          "unitId": "s01_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "標準偏差が0となるデータの特徴はどれか？",
+          "choices": [
+            "すべての値が等しい",
+            "中央値が平均と異なる",
+            "外れ値が存在する",
+            "分布が歪んでいる"
+          ],
+          "answerIndex": 0,
+          "explanation": "すべての値が同じなら平均との差がすべて0となり、標準偏差も0になる。",
+          "tags": [
+            "s01_u01",
+            "標準偏差",
+            "極端例"
+          ],
+          "unitId": "s01_u01",
+          "importance": 2,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "外れ値が含まれるデータで中心を表す指標として最も適切なのはどれか？",
+          "choices": [
+            "平均値",
+            "中央値",
+            "分散",
+            "標準偏差"
+          ],
+          "answerIndex": 1,
+          "explanation": "中央値は順位に基づくため、外れ値の影響を受けにくい。",
+          "tags": [
+            "s01_u01",
+            "代表値",
+            "外れ値"
+          ],
+          "unitId": "s01_u01",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "平均値と中央値が大きく異なるときに考えられる状況はどれか？",
+          "choices": [
+            "分布が完全に対称である",
+            "外れ値や歪みがある",
+            "すべての値が等しい",
+            "分散が0である"
+          ],
+          "answerIndex": 1,
+          "explanation": "平均値と中央値の差は、外れ値や分布の歪みを示唆する。",
+          "tags": [
+            "s01_u01",
+            "代表値",
+            "分布の形"
+          ],
+          "unitId": "s01_u01",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "四分位範囲が小さい一方で標準偏差が大きい場合に考えられることはどれか？",
+          "choices": [
+            "外れ値の影響が大きい",
+            "データが完全に対称である",
+            "分散が必ず小さい",
+            "中央値が計算できない"
+          ],
+          "answerIndex": 0,
+          "explanation": "四分位範囲は外れ値に強い一方、標準偏差は外れ値の影響を受けやすい。",
+          "tags": [
+            "s01_u01",
+            "散布度",
+            "外れ値"
+          ],
+          "unitId": "s01_u01",
+          "importance": 2,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "データの代表値として最頻値が有効に機能しやすい状況はどれか？",
+          "choices": [
+            "値がすべて異なる連続データ",
+            "外れ値が1つだけある場合",
+            "カテゴリや特定の値に集中がある場合",
+            "データ数が極端に少ない場合"
+          ],
+          "answerIndex": 2,
+          "explanation": "最頻値は最も多く現れる値であり、カテゴリデータや同じ値が集中するデータで有効である。",
+          "tags": [
+            "s01_u01",
+            "代表値",
+            "最頻値"
+          ],
+          "unitId": "s01_u01",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "平均値が中央値より大きくなりやすい分布の特徴として適切なのはどれか？",
+          "choices": [
+            "左に長い裾をもつ分布",
+            "右に長い裾をもつ分布",
+            "完全な対称分布",
+            "すべての値が等しい分布"
+          ],
+          "answerIndex": 1,
+          "explanation": "右に長い裾をもつ分布では、大きな値に引っ張られて平均値が中央値より大きくなりやすい。",
+          "tags": [
+            "s01_u01",
+            "歪度",
+            "代表値"
+          ],
+          "unitId": "s01_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "平均と標準偏差の組が特に解釈しやすい分布はどれか？",
+          "choices": [
+            "極端に歪んだ分布",
+            "二峰性の分布",
+            "正規分布に近い分布",
+            "カテゴリカルデータの分布"
+          ],
+          "answerIndex": 2,
+          "explanation": "正規分布に近い場合、平均を中心、標準偏差をばらつきとして解釈しやすい。",
+          "tags": [
+            "s01_u01",
+            "平均",
+            "標準偏差"
+          ],
+          "unitId": "s01_u01",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "外れ値が1つ追加された場合に最も影響を受けやすい指標はどれか？",
+          "choices": [
+            "中央値",
+            "四分位範囲",
+            "平均値",
+            "最頻値"
+          ],
+          "answerIndex": 2,
+          "explanation": "平均値はすべての値を用いるため、極端な値の影響を受けやすい。",
+          "tags": [
+            "s01_u01",
+            "平均",
+            "外れ値"
+          ],
+          "unitId": "s01_u01",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "分散を用いる際に注意すべき点として適切なのはどれか？",
+          "choices": [
+            "単位が元データと同じである",
+            "平方単位になる",
+            "外れ値に影響されない",
+            "中央値と常に一致する"
+          ],
+          "answerIndex": 1,
+          "explanation": "分散は平均との差を二乗するため、単位も平方単位になる。",
+          "tags": [
+            "s01_u01",
+            "分散",
+            "単位"
+          ],
+          "unitId": "s01_u01",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "標準偏差を用いる利点として最も適切なのはどれか？",
+          "choices": [
+            "外れ値に強い",
+            "元データと同じ単位で解釈できる",
+            "計算が不要である",
+            "分布の形が必ず分かる"
+          ],
+          "answerIndex": 1,
+          "explanation": "標準偏差は分散の平方根なので、元データと同じ単位で扱える。",
+          "tags": [
+            "s01_u01",
+            "標準偏差",
+            "解釈"
+          ],
+          "unitId": "s01_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "対称で単峰に近い分布で一致しやすい代表値の組合せはどれか？",
+          "choices": [
+            "平均値・中央値・最頻値",
+            "分散・標準偏差・範囲",
+            "最大値・最小値・中央値",
+            "四分位数・分散・平均値"
+          ],
+          "answerIndex": 0,
+          "explanation": "対称で単峰に近い分布では、平均値・中央値・最頻値が近い値になりやすい。",
+          "tags": [
+            "s01_u01",
+            "代表値",
+            "対称分布"
+          ],
+          "unitId": "s01_u01",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "外れ値があるデータで、平均値だけを代表値として用いると起こりやすい問題はどれか？",
+          "choices": [
+            "データ数が増える",
+            "分布の中心を誤解する",
+            "単位が消える",
+            "中央値が計算できなくなる"
+          ],
+          "answerIndex": 1,
+          "explanation": "外れ値に引っ張られた平均値を中心とみなすと、分布の特徴を誤って解釈する可能性がある。",
+          "tags": [
+            "s01_u01",
+            "平均",
+            "解釈"
+          ],
+          "unitId": "s01_u01",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "同じ中央値をもつ2つのデータ集合を比較するとき、次に確認すべき視点として適切なのはどれか？",
+          "choices": [
+            "散布度の大きさ",
+            "中央値の定義",
+            "データ名の違い",
+            "単位を無視した大小"
+          ],
+          "answerIndex": 0,
+          "explanation": "中央値が同じでも、データの広がりは異なる場合があるため散布度を確認する。",
+          "tags": [
+            "s01_u01",
+            "中央値",
+            "散布度"
+          ],
+          "unitId": "s01_u01",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "代表値と散布度を組み合わせて記述する目的として適切なのはどれか？",
+          "choices": [
+            "計算を簡単にするため",
+            "中心と広がりを同時に示すため",
+            "外れ値を必ず除去するため",
+            "データ数を隠すため"
+          ],
+          "answerIndex": 1,
+          "explanation": "代表値だけでは中心しか分からないため、散布度と組み合わせることで分布の特徴を把握しやすくなる。",
+          "tags": [
+            "s01_u01",
+            "記述統計",
+            "要約"
+          ],
+          "unitId": "s01_u01",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        }
+      ]
+    }
+  ]
+}

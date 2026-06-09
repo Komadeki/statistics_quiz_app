@@ -8,17 +8,17 @@ import 'purchase_store.dart';
 
 /// ストアに登録した productId と**完全一致**させること
 class ProductCatalog {
-  // Play Console の productId（deck_xxx_unlock）と対になる“デッキID本体”
-  // ※ 小文字に統一（例: deck_m01）
+  // App Store / Play Console の productId（s01_unlock など）と対になるデッキID本体
+  // ※ deck_unit_master.csv / deck_sXX.json の deck id と一致させる
   static const deckIds = [
-    'deck_m01',
-    'deck_m02',
-    'deck_m03',
-    'deck_m04',
-    'deck_m05',
-    'deck_m06',
-    'deck_m07',
-    'deck_m08',
+    's01',
+    's02',
+    's03',
+    's04',
+    's05',
+    's06',
+    's07',
+    's08',
   ];
 
   // セット/全体/Pro
@@ -54,7 +54,7 @@ class IapService with ChangeNotifier {
   bool get isReady => available && products.isNotEmpty;
 
   // ===== 所有状態（メモリキャッシュ） =====
-  /// 例: {'deck_m01', 'deck_m02', ...}  ※単体デッキ購入の所有状況
+  /// 例: {'s01', 's02', ...}  ※単体デッキ購入の所有状況
   final Set<String> _ownedDeckIds = <String>{};
 
   /// Pro フラグ

@@ -12,14 +12,14 @@ const Map<String, String> _kFakePrices = {
   'pro_upgrade': '¥300',
   'bundle_all_unlock': '¥980',
   'bundle_5decks_unlock': '¥600',
-  'deck_m01_unlock': '¥160',
-  'deck_m02_unlock': '¥160',
-  'deck_m03_unlock': '¥160',
-  'deck_m04_unlock': '¥160',
-  'deck_m05_unlock': '¥160',
-  'deck_m06_unlock': '¥160',
-  'deck_m07_unlock': '¥160',
-  'deck_m08_unlock': '¥160',
+  's01_unlock': '¥160',
+  's02_unlock': '¥160',
+  's03_unlock': '¥160',
+  's04_unlock': '¥160',
+  's05_unlock': '¥160',
+  's06_unlock': '¥160',
+  's07_unlock': '¥160',
+  's08_unlock': '¥160',
 };
 
 class PurchaseScreen extends StatefulWidget {
@@ -113,14 +113,14 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
 
       final loader = await DeckLoader.instance();
       const assetDeckIds = [
-        'deck_m01',
-        'deck_m02',
-        'deck_m03',
-        'deck_m04',
-        'deck_m05',
-        'deck_m06',
-        'deck_m07',
-        'deck_m08',
+        's01',
+        's02',
+        's03',
+        's04',
+        's05',
+        's06',
+        's07',
+        's08',
       ];
       final metaMap = await loader.unitTitlesFor(assetDeckIds);
       _deckUnitTitles = {
@@ -292,14 +292,14 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
     }
     if (productId == 'bundle_all_unlock') {
       await PurchaseStore.addOwnedDecks([
-        'deck_m01',
-        'deck_m02',
-        'deck_m03',
-        'deck_m04',
-        'deck_m05',
-        'deck_m06',
-        'deck_m07',
-        'deck_m08',
+        's01',
+        's02',
+        's03',
+        's04',
+        's05',
+        's06',
+        's07',
+        's08',
       ]);
       return;
     }
@@ -555,14 +555,14 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
 
     // ★ 全デッキのアクセシビリティを算出（個別所有/Pro ∪ 5パック選択）
     const allDeckIds = [
-      'deck_m01',
-      'deck_m02',
-      'deck_m03',
-      'deck_m04',
-      'deck_m05',
-      'deck_m06',
-      'deck_m07',
-      'deck_m08',
+      's01',
+      's02',
+      's03',
+      's04',
+      's05',
+      's06',
+      's07',
+      's08',
     ];
     final accessibleCount = allDeckIds.where(_isDeckAccessible).length;
     final allAccessible = accessibleCount == allDeckIds.length;
@@ -576,14 +576,14 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
               const ListTile(title: Text('アプリ内購入')),
 
               // 単元（デッキ）
-              _deckTile(deckId: 'deck_m01', title: '現代社会と健康（上）'),
-              _deckTile(deckId: 'deck_m02', title: '現代社会と健康（中）'),
-              _deckTile(deckId: 'deck_m03', title: '現代社会と健康（下）'),
-              _deckTile(deckId: 'deck_m04', title: '安全な社会生活'),
-              _deckTile(deckId: 'deck_m05', title: '生涯を通じる健康（前半）'),
-              _deckTile(deckId: 'deck_m06', title: '生涯を通じる健康（後半）'),
-              _deckTile(deckId: 'deck_m07', title: '健康を支える環境づくり（前半）'),
-              _deckTile(deckId: 'deck_m08', title: '健康を支える環境づくり（後半）'),
+              _deckTile(deckId: 's01', title: '現代社会と健康（上）'),
+              _deckTile(deckId: 's02', title: '現代社会と健康（中）'),
+              _deckTile(deckId: 's03', title: '現代社会と健康（下）'),
+              _deckTile(deckId: 's04', title: '安全な社会生活'),
+              _deckTile(deckId: 's05', title: '生涯を通じる健康（前半）'),
+              _deckTile(deckId: 's06', title: '生涯を通じる健康（後半）'),
+              _deckTile(deckId: 's07', title: '健康を支える環境づくり（前半）'),
+              _deckTile(deckId: 's08', title: '健康を支える環境づくり（後半）'),
 
               const Divider(),
 
@@ -663,14 +663,14 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
               Builder(
                 builder: (context) {
                   const allDeckIds = [
-                    'deck_m01',
-                    'deck_m02',
-                    'deck_m03',
-                    'deck_m04',
-                    'deck_m05',
-                    'deck_m06',
-                    'deck_m07',
-                    'deck_m08',
+                    's01',
+                    's02',
+                    's03',
+                    's04',
+                    's05',
+                    's06',
+                    's07',
+                    's08',
                   ];
 
                   // 個別購入 ∪ 5パック選択で全デッキをカバーしているか（Proは含めない）

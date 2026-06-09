@@ -158,8 +158,7 @@ class _ResultScreenState extends State<ResultScreen> {
           padding: const EdgeInsets.all(24),
           children: [
             // ★ 追加：セッションタイプ別タイトルバッジ
-            if (widget.sessionType != null)
-              _buildSessionHeader(widget.sessionType!),
+            if (widget.sessionType != null) _buildSessionHeader(widget.sessionType!),
             const SizedBox(height: 12),
 
             // スコアヘッダ
@@ -188,6 +187,10 @@ class _ResultScreenState extends State<ResultScreen> {
                 3: '応用',
               },
             ),
+
+            const SizedBox(height: 12),
+
+            _WrongTagCard(tags: widget.tags),
 
             const SizedBox(height: 16),
 
@@ -229,7 +232,6 @@ class _ResultScreenState extends State<ResultScreen> {
                   minimumSize: const Size(double.infinity, 48),
                   textStyle: const TextStyle(fontSize: 18),
                 ),
-
                 onPressed: () {
                   debugPrint('[HISTORY/NAV] open sid=${widget.sessionId}');
                   Navigator.of(context).push(
@@ -278,11 +280,7 @@ class _ResultScreenState extends State<ResultScreen> {
                         : null,
                     icon: const Icon(Icons.refresh),
                     label: Text(
-                      ready
-                          ? (hasWrong
-                                ? '誤答だけもう一度（${list.length}問）'
-                                : '今回の誤答はありません')
-                          : '誤答を抽出中…',
+                      ready ? (hasWrong ? '誤答だけもう一度（${list.length}問）' : '今回の誤答はありません') : '誤答を抽出中…',
                     ),
                     style: FilledButton.styleFrom(
                       minimumSize: const Size(double.infinity, 48),
@@ -495,6 +493,70 @@ class _MetadataBreakdownCard extends StatelessWidget {
   }
 }
 
+class _WrongTagCard extends StatelessWidget {
+  final Map<String, TagStat>? tags;
+
+  const _WrongTagCard({required this.tags});
+
+  bool _isUnitIdTag(String tag) {
+    return RegExp(r'^s\d{2}_u\d{2}$').hasMatch(tag);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final raw = tags;
+    if (raw == null || raw.isEmpty) return const SizedBox.shrink();
+
+    final items = raw.entries
+        .where((e) => e.value.wrong > 0)
+        .where((e) => e.key.trim().isNotEmpty)
+        .where((e) => !_isUnitIdTag(e.key.trim()))
+        .toList()
+      ..sort((a, b) {
+        final c = b.value.wrong.compareTo(a.value.wrong);
+        return c != 0 ? c : a.key.compareTo(b.key);
+      });
+
+    final top = items.take(5).toList();
+    if (top.isEmpty) return const SizedBox.shrink();
+
+    return Card(
+      elevation: 1,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(12, 12, 12, 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              '今回間違えたテーマ',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            for (final e in top)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 6),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        e.key,
+                        style: const TextStyle(fontSize: 14),
+                      ),
+                    ),
+                    Text(
+                      '${e.value.wrong}回',
+                      style: const TextStyle(fontSize: 13),
+                    ),
+                  ],
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 // ===== 出題内訳カード（日本語タイトル対応・5件まで表示＆開閉） =====
 class _UnitBreakdownCard extends StatefulWidget {
   final Map<String, int> unitBreakdown;
@@ -530,9 +592,7 @@ class _UnitBreakdownCardState extends State<_UnitBreakdownCard> {
 
     final total = widget.totalQuestions;
     final showToggle = entries.length > widget.initialMax;
-    final visibleCount = _expanded
-        ? entries.length
-        : entries.length.clamp(0, widget.initialMax);
+    final visibleCount = _expanded ? entries.length : entries.length.clamp(0, widget.initialMax);
 
     return Card(
       elevation: 1,
@@ -554,9 +614,8 @@ class _UnitBreakdownCardState extends State<_UnitBreakdownCard> {
                 index: i,
                 title: (widget.unitTitleMap?[entries[i].key] ?? entries[i].key),
                 asked: entries[i].value,
-                total: total == 0
-                    ? widget.unitBreakdown.values.fold<int>(0, (a, b) => a + b)
-                    : total,
+                total:
+                    total == 0 ? widget.unitBreakdown.values.fold<int>(0, (a, b) => a + b) : total,
               ),
 
             if (showToggle) ...[

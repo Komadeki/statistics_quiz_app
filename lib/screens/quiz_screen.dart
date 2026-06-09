@@ -378,9 +378,8 @@ class _QuizScreenState extends State<QuizScreen> {
       for (final id in _stableOrder) {
         final orig = _id2card[id]!;
         final ord = s.choiceOrders?[id];
-        final restored = (ord == null)
-            ? _shuffledWithOrder(orig, outOrder: <int>[])
-            : orig.withChoiceOrder(ord);
+        final restored =
+            (ord == null) ? _shuffledWithOrder(orig, outOrder: <int>[]) : orig.withChoiceOrder(ord);
         sequence.add(restored);
         // _choiceOrders には現況を保持（以後のオートセーブで一貫）
         if (ord != null) {
@@ -602,9 +601,8 @@ class _QuizScreenState extends State<QuizScreen> {
       for (final id in _stableOrder) {
         final orig = _id2card[id]!;
         final ord = s.choiceOrders?[id];
-        final restored = (ord == null)
-            ? _shuffledWithOrder(orig, outOrder: <int>[])
-            : orig.withChoiceOrder(ord);
+        final restored =
+            (ord == null) ? _shuffledWithOrder(orig, outOrder: <int>[]) : orig.withChoiceOrder(ord);
         sequence.add(restored);
         if (ord != null) {
           _choiceOrders[id] = List<int>.from(ord);
@@ -876,9 +874,10 @@ class _QuizScreenState extends State<QuizScreen> {
               sessionId: _sessionId!,
               unitBreakdown: Map<String, int>.from(_unitCount),
               deckId: deckIdSave,
-              deckTitle: titleForScore, // ← ここを反映
+              deckTitle: titleForScore,
               durationSec: durationSec,
               unitTitleMap: unitTitleMap,
+              tags: tagStats.isEmpty ? null : tagStats,
               importanceStats: importanceStats,
               difficultyStats: difficultyStats,
             ),
@@ -1178,8 +1177,8 @@ class _ProgressBar extends StatelessWidget implements PreferredSizeWidget {
     final state = context.findAncestorStateOfType<_QuizScreenState>();
     final value =
         (state == null || !state._initReady || state._abortAndPop || state.sequence.isEmpty)
-        ? 0.0
-        : (state.index + 1) / state.sequence.length;
+            ? 0.0
+            : (state.index + 1) / state.sequence.length;
     return LinearProgressIndicator(value: value, minHeight: 6);
   }
 }

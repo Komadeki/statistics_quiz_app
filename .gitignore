@@ -51,3 +51,7 @@ android/upload-keystore.jks
 # Android build artifacts
 *.apk
 *.aab
+# Local build artifacts / logs
+*.apk
+*.aab
+*.log

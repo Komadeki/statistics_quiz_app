@@ -54,7 +54,7 @@ class DeckLoader {
   final Map<String, String> _unitToDeck = {};
 
   // 🔵 追加：deckId(小文字) -> Deck
-  //   - デッキIDの大小文字ゆらぎ（例：JSON側 deck_M01 / 画面側 deck_m01）に対応
+  //   - デッキIDの大小文字ゆらぎ（例：JSON側 S01 / 画面側 s01）に対応
   final Map<String, Deck> _deckByIdLower = {};
 
   // ========= 公開API：互換維持 =========

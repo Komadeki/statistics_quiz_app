@@ -26,9 +26,9 @@ class AppConfig {
   static String get appTitle {
     switch (env) {
       case AppEnv.dev:
-        return '健康クイズ（DEV）';
+        return '統計検定2級対策（DEV）';
       case AppEnv.qa:
-        return '健康クイズ（QA）';
+        return '統計検定2級対策（QA）';
       case AppEnv.prod:
         return '統計検定2級 一問一答';
     }

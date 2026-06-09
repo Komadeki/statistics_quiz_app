@@ -1,0 +1,44 @@
+{
+  "deckId": "s02",
+  "deckTitle": "統計検定2級",
+  "deckSubtitle": "確率",
+  "description": "確率の基本概念から条件付き確率・独立性までを体系的に学習するデッキ。",
+  "version": 1,
+  "units": [
+    {
+      "unitId": "s02_u01",
+      "unitNo": 1,
+      "unitTitleJapanese": "確率の基本概念",
+      "unitTitleEnglish": "Basic Concepts of Probability",
+      "path": "assets/decks/units/unit_s02_u01.json"
+    },
+    {
+      "unitId": "s02_u02",
+      "unitNo": 2,
+      "unitTitleJapanese": "確率の加法・乗法法則",
+      "unitTitleEnglish": "Addition and Multiplication Rules",
+      "path": "assets/decks/units/unit_s02_u02.json"
+    },
+    {
+      "unitId": "s02_u03",
+      "unitNo": 3,
+      "unitTitleJapanese": "条件付き確率",
+      "unitTitleEnglish": "Conditional Probability",
+      "path": "assets/decks/units/unit_s02_u03.json"
+    },
+    {
+      "unitId": "s02_u04",
+      "unitNo": 4,
+      "unitTitleJapanese": "独立性と確率の性質",
+      "unitTitleEnglish": "Independence and Properties of Probability",
+      "path": "assets/decks/units/unit_s02_u04.json"
+    },
+    {
+      "unitId": "s02_u05",
+      "unitNo": 5,
+      "unitTitleJapanese": "確率モデル",
+      "unitTitleEnglish": "Probability Models",
+      "path": "assets/decks/units/unit_s02_u05.json"
+    }
+  ]
+}

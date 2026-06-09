@@ -1,0 +1,44 @@
+{
+  "deckId": "s01",
+  "deckTitle": "統計検定2級",
+  "deckSubtitle": "記述統計",
+  "description": "統計検定2級の基礎となる記述統計分野を体系的に学習するデッキ。",
+  "version": 1,
+  "units": [
+    {
+      "unitId": "s01_u01",
+      "unitNo": 1,
+      "unitTitleJapanese": "データと統計の役割",
+      "unitTitleEnglish": "Data and the Role of Statistics",
+      "path": "assets/decks/units/unit_s01_u01.json"
+    },
+    {
+      "unitId": "s01_u02",
+      "unitNo": 2,
+      "unitTitleJapanese": "度数分布表とヒストグラム",
+      "unitTitleEnglish": "Frequency Tables and Histograms",
+      "path": "assets/decks/units/unit_s01_u02.json"
+    },
+    {
+      "unitId": "s01_u03",
+      "unitNo": 3,
+      "unitTitleJapanese": "代表値",
+      "unitTitleEnglish": "Measures of Central Tendency",
+      "path": "assets/decks/units/unit_s01_u03.json"
+    },
+    {
+      "unitId": "s01_u04",
+      "unitNo": 4,
+      "unitTitleJapanese": "散布度",
+      "unitTitleEnglish": "Measures of Dispersion",
+      "path": "assets/decks/units/unit_s01_u04.json"
+    },
+    {
+      "unitId": "s01_u05",
+      "unitNo": 5,
+      "unitTitleJapanese": "分布の形と標準化",
+      "unitTitleEnglish": "Distribution Shape and Standardization",
+      "path": "assets/decks/units/unit_s01_u05.json"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "deckId": "s04",
+  "deckTitle": "統計検定2級",
+  "deckSubtitle": "推定",
+  "description": "母集団と標本の関係を踏まえ、点推定・区間推定の考え方を学習するデッキ。",
+  "version": 1,
+  "units": [
+    {
+      "unitId": "s04_u01",
+      "unitNo": 1,
+      "unitTitleJapanese": "母集団と標本",
+      "unitTitleEnglish": "Population and Sample",
+      "path": "assets/decks/units/unit_s04_u01.json"
+    },
+    {
+      "unitId": "s04_u02",
+      "unitNo": 2,
+      "unitTitleJapanese": "点推定と推定量",
+      "unitTitleEnglish": "Point Estimation",
+      "path": "assets/decks/units/unit_s04_u02.json"
+    },
+    {
+      "unitId": "s04_u03",
+      "unitNo": 3,
+      "unitTitleJapanese": "標本分布と中心極限定理",
+      "unitTitleEnglish": "Sampling Distributions and CLT",
+      "path": "assets/decks/units/unit_s04_u03.json"
+    },
+    {
+      "unitId": "s04_u04",
+      "unitNo": 4,
+      "unitTitleJapanese": "区間推定と信頼区間",
+      "unitTitleEnglish": "Confidence Intervals",
+      "path": "assets/decks/units/unit_s04_u04.json"
+    },
+    {
+      "unitId": "s04_u05",
+      "unitNo": 5,
+      "unitTitleJapanese": "推定の精度と標本サイズ",
+      "unitTitleEnglish": "Precision and Sample Size",
+      "path": "assets/decks/units/unit_s04_u05.json"
+    }
+  ]
+}

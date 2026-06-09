@@ -1,0 +1,44 @@
+{
+  "deckId": "s03",
+  "deckTitle": "統計検定2級",
+  "deckSubtitle": "確率分布",
+  "description": "確率変数と代表的な確率分布を理解し、期待値や分散の考え方を身につけるデッキ。",
+  "version": 1,
+  "units": [
+    {
+      "unitId": "s03_u01",
+      "unitNo": 1,
+      "unitTitleJapanese": "確率変数と分布",
+      "unitTitleEnglish": "Random Variables and Distributions",
+      "path": "assets/decks/units/unit_s03_u01.json"
+    },
+    {
+      "unitId": "s03_u02",
+      "unitNo": 2,
+      "unitTitleJapanese": "期待値と分散",
+      "unitTitleEnglish": "Expected Value and Variance",
+      "path": "assets/decks/units/unit_s03_u02.json"
+    },
+    {
+      "unitId": "s03_u03",
+      "unitNo": 3,
+      "unitTitleJapanese": "離散型確率分布",
+      "unitTitleEnglish": "Discrete Distributions",
+      "path": "assets/decks/units/unit_s03_u03.json"
+    },
+    {
+      "unitId": "s03_u04",
+      "unitNo": 4,
+      "unitTitleJapanese": "正規分布",
+      "unitTitleEnglish": "Normal Distribution",
+      "path": "assets/decks/units/unit_s03_u04.json"
+    },
+    {
+      "unitId": "s03_u05",
+      "unitNo": 5,
+      "unitTitleJapanese": "確率分布の応用と近似",
+      "unitTitleEnglish": "Applications and Approximations of Distributions",
+      "path": "assets/decks/units/unit_s03_u05.json"
+    }
+  ]
+}

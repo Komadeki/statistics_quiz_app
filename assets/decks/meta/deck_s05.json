@@ -1,0 +1,44 @@
+{
+  "deckId": "s05",
+  "deckTitle": "統計検定2級",
+  "deckSubtitle": "仮説検定",
+  "description": "仮説検定の考え方から代表的な検定手法までを体系的に理解するデッキ。",
+  "version": 1,
+  "units": [
+    {
+      "unitId": "s05_u01",
+      "unitNo": 1,
+      "unitTitleJapanese": "仮説検定の考え方",
+      "unitTitleEnglish": "Hypothesis Testing Framework",
+      "path": "assets/decks/units/unit_s05_u01.json"
+    },
+    {
+      "unitId": "s05_u02",
+      "unitNo": 2,
+      "unitTitleJapanese": "検定統計量と分布",
+      "unitTitleEnglish": "Test Statistics and Distributions",
+      "path": "assets/decks/units/unit_s05_u02.json"
+    },
+    {
+      "unitId": "s05_u03",
+      "unitNo": 3,
+      "unitTitleJapanese": "p値と有意水準",
+      "unitTitleEnglish": "p-values and Significance Levels",
+      "path": "assets/decks/units/unit_s05_u03.json"
+    },
+    {
+      "unitId": "s05_u04",
+      "unitNo": 4,
+      "unitTitleJapanese": "代表的な仮説検定",
+      "unitTitleEnglish": "Common Hypothesis Tests",
+      "path": "assets/decks/units/unit_s05_u04.json"
+    },
+    {
+      "unitId": "s05_u05",
+      "unitNo": 5,
+      "unitTitleJapanese": "検定の誤りと検出力",
+      "unitTitleEnglish": "Errors and Power of Tests",
+      "path": "assets/decks/units/unit_s05_u05.json"
+    }
+  ]
+}

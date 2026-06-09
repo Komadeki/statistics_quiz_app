@@ -1,0 +1,44 @@
+{
+  "deckId": "s06",
+  "deckTitle": "統計検定2級",
+  "deckSubtitle": "回帰・相関",
+  "description": "相関係数と回帰分析を通して、データ間の関係の捉え方を学ぶデッキ。",
+  "version": 1,
+  "units": [
+    {
+      "unitId": "s06_u01",
+      "unitNo": 1,
+      "unitTitleJapanese": "相関係数と散布図",
+      "unitTitleEnglish": "Correlation and Scatterplots",
+      "path": "assets/decks/units/unit_s06_u01.json"
+    },
+    {
+      "unitId": "s06_u02",
+      "unitNo": 2,
+      "unitTitleJapanese": "単回帰分析",
+      "unitTitleEnglish": "Simple Linear Regression",
+      "path": "assets/decks/units/unit_s06_u02.json"
+    },
+    {
+      "unitId": "s06_u03",
+      "unitNo": 3,
+      "unitTitleJapanese": "回帰係数の推定と解釈",
+      "unitTitleEnglish": "Estimation and Interpretation of Coefficients",
+      "path": "assets/decks/units/unit_s06_u03.json"
+    },
+    {
+      "unitId": "s06_u04",
+      "unitNo": 4,
+      "unitTitleJapanese": "回帰モデルの評価",
+      "unitTitleEnglish": "Evaluation of Regression Models",
+      "path": "assets/decks/units/unit_s06_u04.json"
+    },
+    {
+      "unitId": "s06_u05",
+      "unitNo": 5,
+      "unitTitleJapanese": "相関と因果の違い",
+      "unitTitleEnglish": "Correlation vs Causation",
+      "path": "assets/decks/units/unit_s06_u05.json"
+    }
+  ]
+}

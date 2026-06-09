@@ -1,0 +1,2106 @@
+{
+  "id": "s04",
+  "title": "確率分布",
+  "subtitle": "Probability Distributions",
+  "isPurchased": false,
+  "units": [
+    {
+      "id": "s04_u01",
+      "title": "確率変数・期待値・分散（線形性）",
+      "unitNo": 1,
+      "cards": [
+        {
+          "question": "確率変数の説明として最も適切なものはどれか。",
+          "choices": [
+            "試行の結果に応じて数値が定まる変数",
+            "必ず一定の値をとる定数",
+            "平均値だけで決まる数値",
+            "標本数を表す記号"
+          ],
+          "answerIndex": 0,
+          "explanation": "確率変数は、偶然試行の結果に対応して数値をとる変数である。",
+          "tags": [
+            "s04_u01",
+            "確率変数",
+            "定義"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "サイコロを1回投げ、出た目をXとする。このときXは何か。",
+          "choices": [
+            "母平均",
+            "確率変数",
+            "標本分散",
+            "相関係数"
+          ],
+          "answerIndex": 1,
+          "explanation": "出た目は試行結果によって変わる数値なので、Xは確率変数である。",
+          "tags": [
+            "s04_u01",
+            "確率変数",
+            "サイコロ"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "離散型確率変数Xの期待値E(X)を表す式として正しいものはどれか。",
+          "choices": [
+            "ΣxP(X=x)",
+            "ΣP(X=x)",
+            "Σx",
+            "Σx²"
+          ],
+          "answerIndex": 0,
+          "explanation": "離散型確率変数の期待値は、各値xにその確率を掛けて合計したものである。",
+          "tags": [
+            "s04_u01",
+            "期待値",
+            "離散型"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "確率変数Xが1,2,3をそれぞれ確率1/3でとるとき、E(X)はいくつか。",
+          "choices": [
+            "1",
+            "2",
+            "3",
+            "6"
+          ],
+          "answerIndex": 1,
+          "explanation": "E(X)=1×1/3+2×1/3+3×1/3=2である。",
+          "tags": [
+            "s04_u01",
+            "期待値",
+            "計算"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "確率変数Xの分散V(X)の説明として最も適切なものはどれか。",
+          "choices": [
+            "Xの値の中心の位置を表す量",
+            "Xの値のばらつきの大きさを表す量",
+            "Xの最大値を表す量",
+            "Xの確率の合計を表す量"
+          ],
+          "answerIndex": 1,
+          "explanation": "分散は、確率変数の値が期待値のまわりにどの程度ばらつくかを表す。",
+          "tags": [
+            "s04_u01",
+            "分散",
+            "定義"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "確率変数Xについて、V(X)=E(X²)-{E(X)}²である。この式の説明として正しいものはどれか。",
+          "choices": [
+            "分散を期待値から求める公式である",
+            "期待値を分散から求める公式である",
+            "標準偏差を直接求める公式である",
+            "確率の合計を求める公式である"
+          ],
+          "answerIndex": 0,
+          "explanation": "分散は、2乗の期待値から期待値の2乗を引いて求められる。",
+          "tags": [
+            "s04_u01",
+            "分散",
+            "公式"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "確率変数Xに対して、E(3X+2)として正しいものはどれか。",
+          "choices": [
+            "3E(X)+2",
+            "3E(X)²+2",
+            "E(X)+5",
+            "9E(X)+4"
+          ],
+          "answerIndex": 0,
+          "explanation": "期待値には線形性があり、E(aX+b)=aE(X)+bである。",
+          "tags": [
+            "s04_u01",
+            "期待値",
+            "線形性"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "確率変数Xに対して、V(3X+2)として正しいものはどれか。",
+          "choices": [
+            "3V(X)+2",
+            "9V(X)",
+            "3V(X)",
+            "9V(X)+2"
+          ],
+          "answerIndex": 1,
+          "explanation": "分散では定数倍は2乗され、加法定数は影響しない。したがってV(3X+2)=9V(X)である。",
+          "tags": [
+            "s04_u01",
+            "分散",
+            "線形変換"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "標準偏差が2である確率変数Xについて、V(X)はいくつか。",
+          "choices": [
+            "2",
+            "4",
+            "√2",
+            "1/2"
+          ],
+          "answerIndex": 1,
+          "explanation": "標準偏差は分散の正の平方根である。標準偏差が2なら分散は2²=4である。",
+          "tags": [
+            "s04_u01",
+            "標準偏差",
+            "分散"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "確率変数XについてE(X)=5のとき、E(X-5)はいくつか。",
+          "choices": [
+            "0",
+            "5",
+            "10",
+            "25"
+          ],
+          "answerIndex": 0,
+          "explanation": "期待値の線形性より、E(X-5)=E(X)-5=0である。",
+          "tags": [
+            "s04_u01",
+            "期待値",
+            "線形性"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "E(X+Y)=E(X)+E(Y)について正しい説明はどれか。",
+          "choices": [
+            "XとYが独立なときだけ成り立つ",
+            "XとYが同じ分布のときだけ成り立つ",
+            "XとYの独立性に関係なく成り立つ",
+            "XとYが正規分布のときだけ成り立つ"
+          ],
+          "answerIndex": 2,
+          "explanation": "期待値の加法性は、独立性に関係なく成り立つ重要な性質である。",
+          "tags": [
+            "s04_u01",
+            "期待値",
+            "加法性"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "V(X+Y)=V(X)+V(Y)が成り立つ条件として最も適切なものはどれか。",
+          "choices": [
+            "XとYが独立である",
+            "XとYの期待値が等しい",
+            "XとYの分散が等しい",
+            "XとYが同じ値をとる"
+          ],
+          "answerIndex": 0,
+          "explanation": "分散の加法性は一般には成り立たず、独立な確率変数ではV(X+Y)=V(X)+V(Y)となる。",
+          "tags": [
+            "s04_u01",
+            "分散",
+            "独立性"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "確率変数XについてV(X)=4のとき、V(X+10)はいくつか。",
+          "choices": [
+            "4",
+            "14",
+            "40",
+            "104"
+          ],
+          "answerIndex": 0,
+          "explanation": "分散は加法定数の影響を受けない。したがってV(X+10)=V(X)=4である。",
+          "tags": [
+            "s04_u01",
+            "分散",
+            "平行移動"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "確率変数XについてV(X)=4のとき、V(2X)はいくつか。",
+          "choices": [
+            "4",
+            "8",
+            "16",
+            "2"
+          ],
+          "answerIndex": 2,
+          "explanation": "分散では定数倍が2乗される。V(2X)=2²V(X)=4×4=16である。",
+          "tags": [
+            "s04_u01",
+            "分散",
+            "定数倍"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "確率変数Xが0を確率0.7、1を確率0.3でとるとき、E(X)はいくつか。",
+          "choices": [
+            "0.3",
+            "0.7",
+            "1",
+            "0.21"
+          ],
+          "answerIndex": 0,
+          "explanation": "E(X)=0×0.7+1×0.3=0.3である。",
+          "tags": [
+            "s04_u01",
+            "ベルヌーイ型",
+            "期待値"
+          ],
+          "unitId": "s04_u01",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "確率変数Xが0を確率0.7、1を確率0.3でとるとき、V(X)はいくつか。",
+          "choices": [
+            "0.09",
+            "0.21",
+            "0.3",
+            "0.49"
+          ],
+          "answerIndex": 1,
+          "explanation": "E(X)=0.3、E(X²)=0²×0.7+1²×0.3=0.3より、V(X)=0.3-0.3²=0.21である。",
+          "tags": [
+            "s04_u01",
+            "ベルヌーイ型",
+            "分散"
+          ],
+          "unitId": "s04_u01",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "確率変数XについてE(X)=2、V(X)=3のとき、E(4X-1)はいくつか。",
+          "choices": [
+            "7",
+            "8",
+            "9",
+            "11"
+          ],
+          "answerIndex": 0,
+          "explanation": "E(4X-1)=4E(X)-1=4×2-1=7である。",
+          "tags": [
+            "s04_u01",
+            "期待値",
+            "線形変換"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "確率変数XについてE(X)=2、V(X)=3のとき、V(4X-1)はいくつか。",
+          "choices": [
+            "11",
+            "12",
+            "47",
+            "48"
+          ],
+          "answerIndex": 3,
+          "explanation": "V(4X-1)=4²V(X)=16×3=48である。加法定数-1は分散に影響しない。",
+          "tags": [
+            "s04_u01",
+            "分散",
+            "線形変換"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "2つの確率変数X,Yについて、V(X+Y)=V(X)+V(Y)+2Cov(X,Y)である。この式からいえることとして最も適切なものはどれか。",
+          "choices": [
+            "共分散が0なら分散は加法的になる",
+            "期待値が等しければ分散は加法的になる",
+            "分散が等しければ共分散は0になる",
+            "XとYが同じ分布なら分散は加法的になる"
+          ],
+          "answerIndex": 0,
+          "explanation": "一般にV(X+Y)=V(X)+V(Y)+2Cov(X,Y)であり、共分散が0なら加法的になる。独立なら共分散は0である。",
+          "tags": [
+            "s04_u01",
+            "分散",
+            "共分散"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "独立な確率変数X,YについてE(X)=3、E(Y)=4のとき、E(2X+Y)はいくつか。",
+          "choices": [
+            "7",
+            "10",
+            "14",
+            "24"
+          ],
+          "answerIndex": 1,
+          "explanation": "期待値の線形性より、独立性に関係なくE(2X+Y)=2E(X)+E(Y)=2×3+4=10である。",
+          "tags": [
+            "s04_u01",
+            "期待値",
+            "複数変数"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "独立な確率変数X,YについてV(X)=2、V(Y)=5のとき、V(3X-Y)はいくつか。",
+          "choices": [
+            "7",
+            "11",
+            "13",
+            "23"
+          ],
+          "answerIndex": 3,
+          "explanation": "独立なのでV(3X-Y)=V(3X)+V(-Y)=9V(X)+V(Y)=18+5=23である。",
+          "tags": [
+            "s04_u01",
+            "分散",
+            "独立",
+            "複数変数"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "確率変数Xを標準化してZ=(X-μ)/σとする。ただしE(X)=μ、V(X)=σ²である。このときE(Z)とV(Z)の組合せとして正しいものはどれか。",
+          "choices": [
+            "E(Z)=0、V(Z)=1",
+            "E(Z)=μ、V(Z)=σ²",
+            "E(Z)=1、V(Z)=0",
+            "E(Z)=σ、V(Z)=μ"
+          ],
+          "answerIndex": 0,
+          "explanation": "E(Z)=(E(X)-μ)/σ=0、V(Z)=V(X/σ)=σ²/σ²=1である。",
+          "tags": [
+            "s04_u01",
+            "標準化",
+            "期待値",
+            "分散"
+          ],
+          "unitId": "s04_u01",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        }
+      ]
+    },
+    {
+      "id": "s04_u02",
+      "title": "ベルヌーイ・二項分布",
+      "unitNo": 2,
+      "cards": [
+        {
+          "question": "ベルヌーイ試行の説明として最も適切なものはどれか。",
+          "choices": [
+            "結果が3通り以上ある試行",
+            "成功・失敗の2通りだけに分類できる試行",
+            "必ず成功確率が1/2である試行",
+            "同じ結果が必ず交互に出る試行"
+          ],
+          "answerIndex": 1,
+          "explanation": "ベルヌーイ試行は、結果を成功・失敗の2通りに分類できる試行である。成功確率は必ずしも1/2ではない。",
+          "tags": [
+            "s04_u02",
+            "ベルヌーイ試行",
+            "二項分布"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "ベルヌーイ分布に従う確率変数Xが、成功を1、失敗を0で表すとき、Xがとる値として正しいものはどれか。",
+          "choices": [
+            "0と1",
+            "1と2",
+            "-1と1",
+            "0からnまでの整数"
+          ],
+          "answerIndex": 0,
+          "explanation": "ベルヌーイ分布では、1回の試行について成功を1、失敗を0として表す。",
+          "tags": [
+            "s04_u02",
+            "ベルヌーイ分布",
+            "確率変数"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "成功確率がpであるベルヌーイ分布の期待値として正しいものはどれか。",
+          "choices": [
+            "1-p",
+            "p",
+            "p(1-p)",
+            "np"
+          ],
+          "answerIndex": 1,
+          "explanation": "ベルヌーイ分布では、X=1となる確率がp、X=0となる確率が1-pなので、期待値はpである。",
+          "tags": [
+            "s04_u02",
+            "ベルヌーイ分布",
+            "期待値"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "成功確率がpであるベルヌーイ分布の分散として正しいものはどれか。",
+          "choices": [
+            "p",
+            "1-p",
+            "p(1-p)",
+            "np(1-p)"
+          ],
+          "answerIndex": 2,
+          "explanation": "ベルヌーイ分布の分散はp(1-p)である。二項分布の分散np(1-p)と区別する。",
+          "tags": [
+            "s04_u02",
+            "ベルヌーイ分布",
+            "分散"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "二項分布B(n,p)が表す確率変数として最も適切なものはどれか。",
+          "choices": [
+            "n回の独立なベルヌーイ試行における成功回数",
+            "1回の試行で成功するかどうか",
+            "連続量として測定される値",
+            "成功するまでに必要な試行回数"
+          ],
+          "answerIndex": 0,
+          "explanation": "二項分布B(n,p)は、成功確率pのベルヌーイ試行を独立にn回行ったときの成功回数の分布である。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "成功回数"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "二項分布B(n,p)に従う確率変数Xがとる値として正しいものはどれか。",
+          "choices": [
+            "0以上1以下の実数",
+            "0,1,2,...,n",
+            "1,2,...,n",
+            "すべての実数"
+          ],
+          "answerIndex": 1,
+          "explanation": "二項分布はn回中の成功回数を表すため、Xは0からnまでの整数値をとる。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "確率変数"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "二項分布B(n,p)の期待値として正しいものはどれか。",
+          "choices": [
+            "p",
+            "1-p",
+            "np",
+            "np(1-p)"
+          ],
+          "answerIndex": 2,
+          "explanation": "二項分布B(n,p)の期待値はnpである。ベルヌーイ分布の期待値pをn回分に拡張したものと考えられる。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "期待値"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "二項分布B(n,p)の分散として正しいものはどれか。",
+          "choices": [
+            "p(1-p)",
+            "np",
+            "np(1-p)",
+            "n/p"
+          ],
+          "answerIndex": 2,
+          "explanation": "二項分布B(n,p)の分散はnp(1-p)である。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "分散"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "1枚の硬貨を5回投げ、表を成功とする。表がちょうど2回出る確率を表す式として正しいものはどれか。",
+          "choices": [
+            "5C2(1/2)^2",
+            "5C2(1/2)^2(1/2)^3",
+            "(1/2)^2(1/2)^3",
+            "5(1/2)^2(1/2)^3"
+          ],
+          "answerIndex": 1,
+          "explanation": "二項分布の確率はnCx p^x(1-p)^(n-x)で表される。ここではn=5, x=2, p=1/2である。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "確率計算"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "ある製品の不良率が0.1で、10個を独立に調べる。不良品の個数Xの分布として最も適切なものはどれか。",
+          "choices": [
+            "B(10,0.1)",
+            "B(0.1,10)",
+            "N(10,0.1)",
+            "P(0.1)"
+          ],
+          "answerIndex": 0,
+          "explanation": "各製品が不良であるかどうかをベルヌーイ試行とみなし、10個中の不良品数を数えるので、Xは二項分布B(10,0.1)に従う。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "モデル選択"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "二項分布B(20,0.3)に従う確率変数Xの期待値として正しいものはどれか。",
+          "choices": [
+            "0.3",
+            "6",
+            "14",
+            "4.2"
+          ],
+          "answerIndex": 1,
+          "explanation": "二項分布B(n,p)の期待値はnpである。20×0.3=6となる。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "期待値"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "二項分布B(20,0.3)に従う確率変数Xの分散として正しいものはどれか。",
+          "choices": [
+            "6",
+            "4.2",
+            "0.21",
+            "14"
+          ],
+          "answerIndex": 1,
+          "explanation": "二項分布B(n,p)の分散はnp(1-p)である。20×0.3×0.7=4.2となる。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "分散"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "二項分布B(5,0.2)に従う確率変数Xについて、P(X=0)として正しいものはどれか。",
+          "choices": [
+            "0.2^5",
+            "0.8^5",
+            "5C1×0.2×0.8^4",
+            "1-0.8^5"
+          ],
+          "answerIndex": 1,
+          "explanation": "成功回数が0回なので、P(X=0)=5C0×0.2^0×0.8^5=0.8^5である。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "確率計算"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "二項分布B(5,0.2)に従う確率変数Xについて、P(X≥1)として正しいものはどれか。",
+          "choices": [
+            "0.2^5",
+            "0.8^5",
+            "1-0.8^5",
+            "1-0.2^5"
+          ],
+          "answerIndex": 2,
+          "explanation": "少なくとも1回成功する確率は、余事象を用いて1-P(X=0)=1-0.8^5と求める。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "余事象"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "二項分布の確率P(X=x)=nCx p^x(1-p)^(n-x)におけるnCxの役割として最も適切なものはどれか。",
+          "choices": [
+            "成功確率を表す",
+            "失敗確率を表す",
+            "成功がx回起こる順序の数を表す",
+            "試行回数を確率に変換する"
+          ],
+          "answerIndex": 2,
+          "explanation": "nCxは、n回のうち成功がx回起こる位置の選び方、つまり順序の数を表す。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "組合せ"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "二項分布を用いる条件として不適切なものはどれか。",
+          "choices": [
+            "各試行の結果を成功・失敗に分けられる",
+            "試行回数があらかじめ決まっている",
+            "各試行の成功確率が一定である",
+            "前の試行結果によって次の成功確率が変わる"
+          ],
+          "answerIndex": 3,
+          "explanation": "二項分布では、各試行が独立であり、成功確率が一定であることが必要である。前の結果で確率が変わる場合は二項分布として扱えない。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "適用条件"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "袋の中に赤玉3個、白玉7個がある。玉を1個取り出して戻す操作を5回行い、赤玉の個数をXとする。Xの分布として最も適切なものはどれか。",
+          "choices": [
+            "B(5,0.3)",
+            "B(5,3)",
+            "B(3,0.5)",
+            "B(10,0.3)"
+          ],
+          "answerIndex": 0,
+          "explanation": "毎回玉を戻すため、各試行は独立で赤玉が出る確率は3/10で一定である。よってXはB(5,0.3)に従う。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "復元抽出"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "袋の中に赤玉3個、白玉7個がある。玉を戻さずに5個取り出し、赤玉の個数をXとする。このXについて最も適切な説明はどれか。",
+          "choices": [
+            "B(5,0.3)に従う",
+            "B(10,0.3)に従う",
+            "各回の成功確率が変わるため、二項分布とはいえない",
+            "赤玉の個数なので必ずベルヌーイ分布に従う"
+          ],
+          "answerIndex": 2,
+          "explanation": "玉を戻さない場合、取り出すたびに袋の中身が変わるため、赤玉が出る確率は一定ではない。二項分布の条件を満たさない。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "非復元抽出"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "ある選手のフリースロー成功率が0.8で一定とする。10本中8本成功する確率を求めるとき、最も適切な式はどれか。",
+          "choices": [
+            "10C8×0.8^8×0.2^2",
+            "10C8×0.8^2×0.2^8",
+            "0.8^8×0.2^2",
+            "8C10×0.8^8×0.2^2"
+          ],
+          "answerIndex": 0,
+          "explanation": "10本中8本成功する確率は、10C8×0.8^8×0.2^2で表される。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "確率計算"
+          ],
+          "unitId": "s04_u02",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "二項分布B(n,p)でp=0.5のとき、分布の形について最も適切なものはどれか。",
+          "choices": [
+            "左右対称になる",
+            "必ず右に歪む",
+            "必ず左に歪む",
+            "nに関係なく一様分布になる"
+          ],
+          "answerIndex": 0,
+          "explanation": "p=0.5の二項分布では、成功と失敗が対称になるため、分布は左右対称になる。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "分布の形"
+          ],
+          "unitId": "s04_u02",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "二項分布B(n,p)でpが小さいときの分布の特徴として最も適切なものはどれか。",
+          "choices": [
+            "成功回数の小さい側に確率が集まりやすい",
+            "成功回数の大きい側に確率が集まりやすい",
+            "常に左右対称になる",
+            "すべての成功回数が同じ確率になる"
+          ],
+          "answerIndex": 0,
+          "explanation": "pが小さいと、成功は起こりにくいため、成功回数の小さい値に確率が集まりやすい。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "分布の形"
+          ],
+          "unitId": "s04_u02",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "二項分布B(n,p)の標準偏差として正しいものはどれか。",
+          "choices": [
+            "np",
+            "p(1-p)",
+            "√np(1-p)",
+            "np(1-p)"
+          ],
+          "answerIndex": 2,
+          "explanation": "標準偏差は分散の平方根である。二項分布の分散はnp(1-p)なので、標準偏差は√np(1-p)である。",
+          "tags": [
+            "s04_u02",
+            "二項分布",
+            "標準偏差"
+          ],
+          "unitId": "s04_u02",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        }
+      ]
+    },
+    {
+      "id": "s04_u03",
+      "title": "ポアソン分布と適用判断",
+      "unitNo": 3,
+      "cards": [
+        {
+          "question": "ポアソン分布がよく用いられる状況として、最も適切なものはどれか。",
+          "choices": [
+            "一定時間や一定範囲内にまれに起こる事象の回数を数える場合",
+            "成功確率が高い試行を少数回だけ繰り返す場合",
+            "母集団の平均を区間推定する場合",
+            "2つの連続変数の相関を調べる場合"
+          ],
+          "answerIndex": 0,
+          "explanation": "ポアソン分布は、一定時間・一定面積・一定距離などの中で起こる事象の回数を表すモデルとして用いられる。",
+          "tags": [
+            "s04_u03",
+            "ポアソン分布",
+            "適用条件"
+          ],
+          "unitId": "s04_u03",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "ポアソン分布のパラメータλについて、最も適切な説明はどれか。",
+          "choices": [
+            "事象が起こる平均回数を表す",
+            "事象が起こる確率の最大値を表す",
+            "試行回数を表す",
+            "標準偏差だけを表す"
+          ],
+          "answerIndex": 0,
+          "explanation": "ポアソン分布のλは、一定区間内で事象が起こる平均回数を表す。",
+          "tags": [
+            "s04_u03",
+            "ポアソン分布",
+            "ラムダ"
+          ],
+          "unitId": "s04_u03",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "確率変数Xがポアソン分布Po(λ)に従うとき、期待値E(X)として正しいものはどれか。",
+          "choices": [
+            "λ",
+            "λ²",
+            "1/λ",
+            "√λ"
+          ],
+          "answerIndex": 0,
+          "explanation": "ポアソン分布では期待値はλである。分散もλになる点も重要である。",
+          "tags": [
+            "s04_u03",
+            "期待値",
+            "ポアソン分布"
+          ],
+          "unitId": "s04_u03",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "確率変数Xがポアソン分布Po(λ)に従うとき、分散V(X)として正しいものはどれか。",
+          "choices": [
+            "λ",
+            "λ²",
+            "√λ",
+            "0"
+          ],
+          "answerIndex": 0,
+          "explanation": "ポアソン分布では期待値と分散がともにλになる。",
+          "tags": [
+            "s04_u03",
+            "分散",
+            "ポアソン分布"
+          ],
+          "unitId": "s04_u03",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "ある交差点で1時間あたり平均3件の事故が起こるとする。事故件数Xをポアソン分布Po(3)で表すとき、1時間に事故が0件である確率はどれか。",
+          "choices": [
+            "e^-3",
+            "3e^-3",
+            "1-e^-3",
+            "3^0"
+          ],
+          "answerIndex": 0,
+          "explanation": "ポアソン分布ではP(X=k)=e^-λ λ^k/k!である。k=0、λ=3よりP(X=0)=e^-3となる。",
+          "tags": [
+            "s04_u03",
+            "ポアソン分布",
+            "確率計算"
+          ],
+          "unitId": "s04_u03",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "ある窓口に1分あたり平均2人が来るとする。来客数XをPo(2)とみなすとき、1分間にちょうど1人来る確率はどれか。",
+          "choices": [
+            "2e^-2",
+            "e^-2/2",
+            "1-e^-2",
+            "4e^-2"
+          ],
+          "answerIndex": 0,
+          "explanation": "P(X=1)=e^-2×2^1/1!=2e^-2である。",
+          "tags": [
+            "s04_u03",
+            "ポアソン分布",
+            "確率計算"
+          ],
+          "unitId": "s04_u03",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "ポアソン分布Po(4)に従う確率変数Xについて、P(X=2)として正しいものはどれか。",
+          "choices": [
+            "8e^-4",
+            "4e^-4",
+            "16e^-4",
+            "2e^-4"
+          ],
+          "answerIndex": 0,
+          "explanation": "P(X=2)=e^-4×4^2/2!=8e^-4である。階乗で割る点を忘れない。",
+          "tags": [
+            "s04_u03",
+            "ポアソン分布",
+            "確率計算"
+          ],
+          "unitId": "s04_u03",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "ポアソン分布を二項分布の近似として使いやすい条件はどれか。",
+          "choices": [
+            "試行回数nが大きく、成功確率pが小さく、npが一定程度である場合",
+            "試行回数nが小さく、成功確率pが大きい場合",
+            "成功確率pが1に近い場合",
+            "各試行の成功確率が毎回大きく変化する場合"
+          ],
+          "answerIndex": 0,
+          "explanation": "二項分布B(n,p)でnが大きくpが小さいとき、λ=npとしてポアソン分布で近似できることがある。",
+          "tags": [
+            "s04_u03",
+            "二項分布",
+            "ポアソン近似"
+          ],
+          "unitId": "s04_u03",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "1日に平均0.5回起こる事象について、2日間の発生回数をポアソン分布で表すとき、λはいくつか。",
+          "choices": [
+            "1",
+            "0.5",
+            "2",
+            "0.25"
+          ],
+          "answerIndex": 0,
+          "explanation": "平均0.5回/日なので、2日間では平均0.5×2=1回である。したがってλ=1となる。",
+          "tags": [
+            "s04_u03",
+            "ラムダ",
+            "単位変換"
+          ],
+          "unitId": "s04_u03",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "ある地域で1日あたり平均4件の問い合わせがある。問い合わせ件数をポアソン分布で表すとき、半日あたりのλとして正しいものはどれか。",
+          "choices": [
+            "2",
+            "4",
+            "8",
+            "16"
+          ],
+          "answerIndex": 0,
+          "explanation": "ポアソン分布のλは対象とする時間の長さに比例する。半日なら4×1/2=2である。",
+          "tags": [
+            "s04_u03",
+            "ラムダ",
+            "単位変換"
+          ],
+          "unitId": "s04_u03",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "ポアソン分布Po(3)に従う確率変数Xについて、P(X≧1)として正しいものはどれか。",
+          "choices": [
+            "1-e^-3",
+            "e^-3",
+            "3e^-3",
+            "1-3e^-3"
+          ],
+          "answerIndex": 0,
+          "explanation": "P(X≧1)=1-P(X=0)である。Po(3)ではP(X=0)=e^-3なので、1-e^-3となる。",
+          "tags": [
+            "s04_u03",
+            "ポアソン分布",
+            "余事象"
+          ],
+          "unitId": "s04_u03",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "ポアソン分布Po(2)に従う確率変数Xについて、P(X≦1)として正しいものはどれか。",
+          "choices": [
+            "3e^-2",
+            "2e^-2",
+            "1-2e^-2",
+            "e^-2/2"
+          ],
+          "answerIndex": 0,
+          "explanation": "P(X≦1)=P(X=0)+P(X=1)=e^-2+2e^-2=3e^-2である。",
+          "tags": [
+            "s04_u03",
+            "ポアソン分布",
+            "累積確率"
+          ],
+          "unitId": "s04_u03",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "ある工場で製品100個あたり平均0.8個の不良品が出る。製品250個中の不良品数をポアソン分布で近似するとき、λはいくつか。",
+          "choices": [
+            "2",
+            "0.8",
+            "1.25",
+            "3.2"
+          ],
+          "answerIndex": 0,
+          "explanation": "100個あたり平均0.8個なので、250個では0.8×250/100=2.0個となる。",
+          "tags": [
+            "s04_u03",
+            "ラムダ",
+            "単位変換"
+          ],
+          "unitId": "s04_u03",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "二項分布B(1000,0.002)をポアソン分布で近似するとき、用いるλとして正しいものはどれか。",
+          "choices": [
+            "2",
+            "0.002",
+            "1000",
+            "500"
+          ],
+          "answerIndex": 0,
+          "explanation": "二項分布B(n,p)をポアソン近似するときはλ=npとする。1000×0.002=2である。",
+          "tags": [
+            "s04_u03",
+            "二項分布",
+            "ポアソン近似"
+          ],
+          "unitId": "s04_u03",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "ある事象が1時間あたり平均6回起こる。30分間で2回以下起こる確率を求めるとき、最も適切なλはどれか。",
+          "choices": [
+            "3",
+            "6",
+            "2",
+            "12"
+          ],
+          "answerIndex": 0,
+          "explanation": "30分は1時間の半分なので、平均回数は6×1/2=3である。求める確率ではPo(3)を用いる。",
+          "tags": [
+            "s04_u03",
+            "ラムダ",
+            "単位変換"
+          ],
+          "unitId": "s04_u03",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "ポアソン分布の適用判断として、最も不適切なものはどれか。",
+          "choices": [
+            "一定回数の試行で成功・失敗を数え、成功確率が高い場合に常に用いる",
+            "一定時間内の電話の着信回数を数える場合に用いる",
+            "一定面積内の欠陥数を数える場合に用いる",
+            "二項分布でnが大きくpが小さい場合の近似として用いる"
+          ],
+          "answerIndex": 0,
+          "explanation": "成功確率が高い二項分布にポアソン近似を常に用いるのは不適切である。ポアソン分布は、まれな事象の回数やnが大きくpが小さい二項分布の近似で使う。",
+          "tags": [
+            "s04_u03",
+            "適用判断",
+            "ポアソン分布"
+          ],
+          "unitId": "s04_u03",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "ある道路で1日あたり平均2件の事故が起こる。事故件数をポアソン分布で表すとき、3日間で少なくとも1件起こる確率として正しいものはどれか。",
+          "choices": [
+            "1-e^-6",
+            "e^-6",
+            "1-e^-2",
+            "6e^-6"
+          ],
+          "answerIndex": 0,
+          "explanation": "3日間の平均は2×3=6なのでX~Po(6)。少なくとも1件は1-P(X=0)=1-e^-6である。",
+          "tags": [
+            "s04_u03",
+            "ポアソン分布",
+            "単位変換",
+            "余事象"
+          ],
+          "unitId": "s04_u03",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "ある商品の購入者数は1時間あたり平均4人で、ポアソン分布に従うとする。2時間でちょうど3人購入する確率として正しいものはどれか。",
+          "choices": [
+            "e^-8×8^3/3!",
+            "e^-4×4^3/3!",
+            "e^-8×4^3/3!",
+            "e^-2×8^3/3!"
+          ],
+          "answerIndex": 0,
+          "explanation": "2時間ではλ=4×2=8である。したがってP(X=3)=e^-8×8^3/3!となる。",
+          "tags": [
+            "s04_u03",
+            "ポアソン分布",
+            "単位変換",
+            "確率計算"
+          ],
+          "unitId": "s04_u03",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "ポアソン分布Po(λ)について、λが大きくなると一般にどのような変化が起こるか。",
+          "choices": [
+            "平均も分散も大きくなる",
+            "平均は大きくなるが分散は一定である",
+            "平均は一定で分散だけが大きくなる",
+            "平均も分散も0に近づく"
+          ],
+          "answerIndex": 0,
+          "explanation": "ポアソン分布では期待値も分散もλである。したがってλが大きくなると、平均も分散も大きくなる。",
+          "tags": [
+            "s04_u03",
+            "期待値",
+            "分散",
+            "ラムダ"
+          ],
+          "unitId": "s04_u03",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "ポアソン分布を用いる際に、事象の発生が互いに独立で、発生率が一定とみなせることが重要になる理由として最も適切なものはどれか。",
+          "choices": [
+            "一定区間内の発生回数を平均発生率λでモデル化するため",
+            "標本平均を正規分布に変換するため",
+            "相関係数を計算するため",
+            "母分散を不偏分散で推定するため"
+          ],
+          "answerIndex": 0,
+          "explanation": "ポアソン分布は、一定時間・一定範囲内の発生回数をλで表すモデルである。そのため、発生率が大きく変動したり、発生が強く依存したりすると適用が難しくなる。",
+          "tags": [
+            "s04_u03",
+            "適用条件",
+            "ポアソン分布"
+          ],
+          "unitId": "s04_u03",
+          "importance": 2,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "ある二項分布B(n,p)をポアソン分布で近似したい。λ=npとしたとき、近似後の分散として最も適切なものはどれか。",
+          "choices": [
+            "np",
+            "p",
+            "n",
+            "np(1-p)"
+          ],
+          "answerIndex": 0,
+          "explanation": "ポアソン近似ではλ=npとおき、近似後のポアソン分布の分散はλ=npである。元の二項分布の分散np(1-p)とは区別する。",
+          "tags": [
+            "s04_u03",
+            "二項分布",
+            "ポアソン近似",
+            "分散"
+          ],
+          "unitId": "s04_u03",
+          "importance": 2,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "ポアソン分布の説明として、最も適切なものはどれか。",
+          "choices": [
+            "非負の整数値をとる離散型確率分布である",
+            "任意の実数値をとる連続型確率分布である",
+            "0から1までの実数値だけをとる分布である",
+            "平均が常に0になる分布である"
+          ],
+          "answerIndex": 0,
+          "explanation": "ポアソン分布は0,1,2,...という非負の整数値をとる離散型確率分布である。",
+          "tags": [
+            "s04_u03",
+            "離散型分布",
+            "ポアソン分布"
+          ],
+          "unitId": "s04_u03",
+          "importance": 2,
+          "difficulty": 1,
+          "isPremium": true
+        }
+      ]
+    },
+    {
+      "id": "s04_u04",
+      "title": "正規分布と標準化（表の読み取り）",
+      "unitNo": 4,
+      "cards": [
+        {
+          "question": "正規分布に従う確率変数Xを標準化するとき、Zの式として正しいものはどれか。",
+          "choices": [
+            "Z=(X-μ)/σ",
+            "Z=(X-σ)/μ",
+            "Z=(X+μ)/σ",
+            "Z=σ(X-μ)"
+          ],
+          "answerIndex": 0,
+          "explanation": "正規分布の標準化では、平均との差を標準偏差で割り、Z=(X-μ)/σとする。",
+          "tags": [
+            "s04_u04",
+            "正規分布",
+            "標準化"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "平均50、標準偏差10の正規分布に従うXについて、X=70の標準化得点Zはいくつか。",
+          "choices": [
+            "1",
+            "2",
+            "5",
+            "20"
+          ],
+          "answerIndex": 1,
+          "explanation": "Z=(70-50)/10=2である。",
+          "tags": [
+            "s04_u04",
+            "正規分布",
+            "標準化",
+            "計算"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "標準正規分布について正しい説明はどれか。",
+          "choices": [
+            "平均0、分散1の正規分布である",
+            "平均1、分散0の正規分布である",
+            "平均0、標準偏差0の正規分布である",
+            "平均1、標準偏差1の二項分布である"
+          ],
+          "answerIndex": 0,
+          "explanation": "標準正規分布は平均0、分散1、標準偏差1の正規分布である。",
+          "tags": [
+            "s04_u04",
+            "標準正規分布",
+            "定義"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "平均100、標準偏差15の正規分布に従うXについて、Xが130以下である確率を求めるとき、標準正規分布表で見るZの値はどれか。",
+          "choices": [
+            "1",
+            "2",
+            "3",
+            "15"
+          ],
+          "answerIndex": 1,
+          "explanation": "Z=(130-100)/15=2であり、P(X≦130)=P(Z≦2)として表を読む。",
+          "tags": [
+            "s04_u04",
+            "正規分布",
+            "標準化",
+            "表の読み取り"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "正規分布のグラフの特徴として最も適切なものはどれか。",
+          "choices": [
+            "平均を中心として左右対称である",
+            "右にだけ裾が長い",
+            "0以上の整数値だけをとる",
+            "確率がすべて同じである"
+          ],
+          "answerIndex": 0,
+          "explanation": "正規分布は平均を中心とする左右対称な連続分布である。",
+          "tags": [
+            "s04_u04",
+            "正規分布",
+            "グラフ"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "標準正規分布表でP(Z≦z)が与えられているとする。P(Z≧1.20)を求める式として適切なものはどれか。",
+          "choices": [
+            "P(Z≦1.20)",
+            "1-P(Z≦1.20)",
+            "P(Z≦-1.20)を2倍する",
+            "P(Z≦1.20)-0.5"
+          ],
+          "answerIndex": 1,
+          "explanation": "右側確率は全体1から左側累積確率を引くので、P(Z≧1.20)=1-P(Z≦1.20)である。",
+          "tags": [
+            "s04_u04",
+            "標準正規分布",
+            "上側確率"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "標準正規分布表でP(Z≦0.84)=0.7995とする。P(Z≦-0.84)に最も近い値はどれか。",
+          "choices": [
+            "0.2005",
+            "0.2995",
+            "0.7995",
+            "1.2005"
+          ],
+          "answerIndex": 0,
+          "explanation": "標準正規分布は0を中心に対称なので、P(Z≦-0.84)=1-P(Z≦0.84)=0.2005である。",
+          "tags": [
+            "s04_u04",
+            "標準正規分布",
+            "対称性",
+            "表の読み取り"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "平均40、標準偏差5の正規分布に従うXについて、P(X≧45)を標準化するとどれか。",
+          "choices": [
+            "P(Z≧1)",
+            "P(Z≧5)",
+            "P(Z≦1)",
+            "P(Z≦-1)"
+          ],
+          "answerIndex": 0,
+          "explanation": "45の標準化得点はZ=(45-40)/5=1なので、P(X≧45)=P(Z≧1)である。",
+          "tags": [
+            "s04_u04",
+            "正規分布",
+            "標準化",
+            "上側確率"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "標準正規分布で、Z=0より小さい確率として正しいものはどれか。",
+          "choices": [
+            "0",
+            "0.25",
+            "0.5",
+            "1"
+          ],
+          "answerIndex": 2,
+          "explanation": "標準正規分布は0を中心に左右対称で、全体の半分が0より小さい。",
+          "tags": [
+            "s04_u04",
+            "標準正規分布",
+            "対称性"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "平均70、標準偏差10の正規分布に従うXについて、Xが平均より1標準偏差大きい値はどれか。",
+          "choices": [
+            "60",
+            "70",
+            "80",
+            "90"
+          ],
+          "answerIndex": 2,
+          "explanation": "平均より1標準偏差大きい値は70+10=80である。",
+          "tags": [
+            "s04_u04",
+            "正規分布",
+            "平均",
+            "標準偏差"
+          ],
+          "unitId": "s04_u04",
+          "importance": 2,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "標準正規分布表でP(Z≦1.64)=0.9495とする。P(Z＞1.64)に最も近い値はどれか。",
+          "choices": [
+            "0.0505",
+            "0.4495",
+            "0.9495",
+            "1.9495"
+          ],
+          "answerIndex": 0,
+          "explanation": "P(Z＞1.64)=1-0.9495=0.0505である。",
+          "tags": [
+            "s04_u04",
+            "標準正規分布",
+            "表の読み取り"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "標準正規分布でP(-1≦Z≦1)を求めるときの考え方として最も適切なものはどれか。",
+          "choices": [
+            "P(Z≦1)-P(Z≦-1)を計算する",
+            "P(Z≦1)+P(Z≦-1)を計算する",
+            "P(Z≦1)だけを読む",
+            "P(Z≦-1)だけを読む"
+          ],
+          "answerIndex": 0,
+          "explanation": "区間確率は上端までの累積確率から下端までの累積確率を引く。",
+          "tags": [
+            "s04_u04",
+            "標準正規分布",
+            "区間確率"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "平均60、標準偏差8の正規分布に従うXについて、P(52≦X≦68)を標準化して表すとどれか。",
+          "choices": [
+            "P(-1≦Z≦1)",
+            "P(1≦Z≦2)",
+            "P(-8≦Z≦8)",
+            "P(52≦Z≦68)"
+          ],
+          "answerIndex": 0,
+          "explanation": "52はZ=(52-60)/8=-1、68はZ=(68-60)/8=1なので、P(-1≦Z≦1)となる。",
+          "tags": [
+            "s04_u04",
+            "正規分布",
+            "標準化",
+            "区間確率"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "正規分布を用いて割合を求める問題で、標準化が必要になる理由として最も適切なものはどれか。",
+          "choices": [
+            "異なる平均・標準偏差の正規分布を標準正規分布表で扱える形に直すため",
+            "データを必ず整数に直すため",
+            "平均を必ず1にするため",
+            "分散を0にして計算を簡単にするため"
+          ],
+          "answerIndex": 0,
+          "explanation": "標準化により、平均や標準偏差が異なる正規分布を標準正規分布に変換し、表を使って確率を求められる。",
+          "tags": [
+            "s04_u04",
+            "正規分布",
+            "標準化",
+            "表の利用"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "標準正規分布表でP(Z≦1.96)=0.9750とする。P(-1.96≦Z≦1.96)に最も近い値はどれか。",
+          "choices": [
+            "0.025",
+            "0.05",
+            "0.95",
+            "0.975"
+          ],
+          "answerIndex": 2,
+          "explanation": "P(-1.96≦Z≦1.96)=0.9750-(1-0.9750)=0.9500である。",
+          "tags": [
+            "s04_u04",
+            "標準正規分布",
+            "区間確率",
+            "対称性"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "平均50、標準偏差10の正規分布に従うXについて、上位約2.5%に入る境界を考える。P(Z≦1.96)=0.9750を用いると、境界値に最も近いものはどれか。",
+          "choices": [
+            "30.4",
+            "50",
+            "69.6",
+            "96"
+          ],
+          "answerIndex": 2,
+          "explanation": "上側2.5%は累積確率0.975に対応するのでZ=1.96。X=50+1.96×10=69.6である。",
+          "tags": [
+            "s04_u04",
+            "正規分布",
+            "標準化",
+            "境界値"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "標準正規分布表でP(Z≦z)を読むとき、zが負の値で表に載っていない場合の対応として最も適切なものはどれか。",
+          "choices": [
+            "対称性を利用して正の値の表から求める",
+            "負の値の確率は0とみなす",
+            "zの符号を無視してそのまま同じ確率にする",
+            "必ず二項分布表を使う"
+          ],
+          "answerIndex": 0,
+          "explanation": "負のzについては、標準正規分布の対称性を利用して、正のzの累積確率から求める。",
+          "tags": [
+            "s04_u04",
+            "標準正規分布",
+            "負のz",
+            "対称性"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "正規分布に従うXについて、P(a≦X≦b)を求める手順として最も適切なものはどれか。",
+          "choices": [
+            "aとbをそれぞれ標準化し、標準正規分布の累積確率の差をとる",
+            "aだけを標準化し、その値を答えにする",
+            "bだけを標準化し、その値を答えにする",
+            "平均と標準偏差を足して確率にする"
+          ],
+          "answerIndex": 0,
+          "explanation": "区間確率では両端を標準化し、上端までの累積確率から下端までの累積確率を引く。",
+          "tags": [
+            "s04_u04",
+            "正規分布",
+            "標準化",
+            "区間確率"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "平均100、標準偏差20の正規分布に従うXについて、P(X≦80)を標準化するとどれか。",
+          "choices": [
+            "P(Z≦-1)",
+            "P(Z≦1)",
+            "P(Z≧-1)",
+            "P(Z≧1)"
+          ],
+          "answerIndex": 0,
+          "explanation": "80の標準化得点はZ=(80-100)/20=-1なので、P(X≦80)=P(Z≦-1)である。",
+          "tags": [
+            "s04_u04",
+            "正規分布",
+            "標準化",
+            "下側確率"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "正規分布を用いる問題で、標準偏差が大きくなると分布の形は一般にどうなるか。",
+          "choices": [
+            "平均を中心に広がりが大きくなる",
+            "平均を中心に狭くなる",
+            "左右対称でなくなる",
+            "連続分布でなくなる"
+          ],
+          "answerIndex": 0,
+          "explanation": "標準偏差は散らばりの大きさを表すため、大きいほど分布は横に広がる。",
+          "tags": [
+            "s04_u04",
+            "正規分布",
+            "標準偏差",
+            "分布の形"
+          ],
+          "unitId": "s04_u04",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "標準正規分布表でP(Z≦1.28)=0.8997とする。P(-1.28≦Z≦1.28)に最も近い値はどれか。",
+          "choices": [
+            "0.1003",
+            "0.2006",
+            "0.7994",
+            "0.8997"
+          ],
+          "answerIndex": 2,
+          "explanation": "P(Z≦-1.28)=1-0.8997=0.1003。よって区間確率は0.8997-0.1003=0.7994である。",
+          "tags": [
+            "s04_u04",
+            "標準正規分布",
+            "区間確率",
+            "表の読み取り"
+          ],
+          "unitId": "s04_u04",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "正規分布の確率を求める場面で、標準化後のZが大きいほど何を意味するか。",
+          "choices": [
+            "平均よりどれだけ標準偏差単位で大きいかを表す",
+            "元の値が必ず大きな確率をもつことを表す",
+            "分散が大きくなったことを表す",
+            "データ数が増えたことを表す"
+          ],
+          "answerIndex": 0,
+          "explanation": "Zは平均からの距離を標準偏差単位で表す値である。Zが大きいほど、平均より上側に離れていることを意味する。",
+          "tags": [
+            "s04_u04",
+            "正規分布",
+            "標準化",
+            "z得点"
+          ],
+          "unitId": "s04_u04",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        }
+      ]
+    },
+    {
+      "id": "s04_u05",
+      "title": "その他の分布（超幾何・幾何・指数など）",
+      "unitNo": 5,
+      "cards": [
+        {
+          "question": "超幾何分布が用いられる典型的な状況として、最も適切なものはどれか。",
+          "choices": [
+            "復元抽出で、各試行の成功確率が一定である場合",
+            "非復元抽出で、母集団中の成功数が決まっている場合",
+            "一定時間内のまれな事象の発生回数を数える場合",
+            "次の成功までの待ち時間を連続量で扱う場合"
+          ],
+          "answerIndex": 1,
+          "explanation": "超幾何分布は、有限母集団から非復元抽出を行い、成功数を数える場面で用いる。",
+          "tags": [
+            "s04_u05",
+            "超幾何分布",
+            "非復元抽出"
+          ],
+          "unitId": "s04_u05",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "幾何分布が表す確率変数として、最も適切なものはどれか。",
+          "choices": [
+            "n回中の成功回数",
+            "初めて成功するまでの試行回数",
+            "一定区間内の発生回数",
+            "標本平均の分布"
+          ],
+          "answerIndex": 1,
+          "explanation": "幾何分布は、独立なベルヌーイ試行を繰り返し、初めて成功するまでの試行回数を表す。",
+          "tags": [
+            "s04_u05",
+            "幾何分布",
+            "ベルヌーイ試行"
+          ],
+          "unitId": "s04_u05",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "指数分布がよく用いられる確率変数として、最も適切なものはどれか。",
+          "choices": [
+            "一定時間内の事故件数",
+            "成功するまでの試行回数",
+            "次の事象が起こるまでの待ち時間",
+            "非復元抽出で得られる成功数"
+          ],
+          "answerIndex": 2,
+          "explanation": "指数分布は、ポアソン過程における次の発生までの待ち時間を表す連続型分布として使われる。",
+          "tags": [
+            "s04_u05",
+            "指数分布",
+            "待ち時間"
+          ],
+          "unitId": "s04_u05",
+          "importance": 1,
+          "difficulty": 1,
+          "isPremium": false
+        },
+        {
+          "question": "復元抽出で、各回の成功確率が一定であるとき、成功回数を表す分布として最も適切なものはどれか。",
+          "choices": [
+            "二項分布",
+            "超幾何分布",
+            "幾何分布",
+            "指数分布"
+          ],
+          "answerIndex": 0,
+          "explanation": "復元抽出では各試行の成功確率が一定なので、成功回数は二項分布で扱うのが典型である。",
+          "tags": [
+            "s04_u05",
+            "二項分布",
+            "復元抽出"
+          ],
+          "unitId": "s04_u05",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "有限個の製品100個のうち不良品が5個ある。この中から10個を非復元抽出するとき、不良品数の分布として最も適切なものはどれか。",
+          "choices": [
+            "二項分布",
+            "ポアソン分布",
+            "超幾何分布",
+            "正規分布"
+          ],
+          "answerIndex": 2,
+          "explanation": "不良品数が決まった有限母集団から非復元抽出しているため、超幾何分布を用いる。",
+          "tags": [
+            "s04_u05",
+            "超幾何分布",
+            "適用判断"
+          ],
+          "unitId": "s04_u05",
+          "importance": 1,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "成功確率がpの独立試行を繰り返す。初めて成功するまでの試行回数Xが幾何分布に従うとき、P(X=3)として正しいものはどれか。",
+          "choices": [
+            "p^3",
+            "(1-p)^3",
+            "(1-p)^2p",
+            "(1-p)p^2"
+          ],
+          "answerIndex": 2,
+          "explanation": "3回目に初めて成功するには、1回目と2回目が失敗し、3回目が成功する必要がある。",
+          "tags": [
+            "s04_u05",
+            "幾何分布",
+            "確率計算"
+          ],
+          "unitId": "s04_u05",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": false
+        },
+        {
+          "question": "指数分布についての説明として、最も適切なものはどれか。",
+          "choices": [
+            "離散型確率分布である",
+            "待ち時間を表す連続型確率分布である",
+            "非復元抽出の成功数を表す",
+            "試行回数が固定された成功回数を表す"
+          ],
+          "answerIndex": 1,
+          "explanation": "指数分布は、ある事象が次に起こるまでの待ち時間を扱う連続型確率分布である。",
+          "tags": [
+            "s04_u05",
+            "指数分布",
+            "連続型分布"
+          ],
+          "unitId": "s04_u05",
+          "importance": 2,
+          "difficulty": 1,
+          "isPremium": true
+        },
+        {
+          "question": "超幾何分布と二項分布の違いとして、最も適切なものはどれか。",
+          "choices": [
+            "超幾何分布は連続型、二項分布は離散型である",
+            "超幾何分布は非復元抽出、二項分布は成功確率一定の試行で用いる",
+            "超幾何分布は待ち時間、二項分布は発生間隔を表す",
+            "超幾何分布は平均だけを扱い、二項分布は分散だけを扱う"
+          ],
+          "answerIndex": 1,
+          "explanation": "超幾何分布は非復元抽出、二項分布は独立で成功確率が一定の試行に対応する。",
+          "tags": [
+            "s04_u05",
+            "超幾何分布",
+            "二項分布",
+            "比較"
+          ],
+          "unitId": "s04_u05",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "ある機械の故障がポアソン過程に従うと考える。次に故障するまでの時間を表す分布として最も適切なものはどれか。",
+          "choices": [
+            "ポアソン分布",
+            "指数分布",
+            "超幾何分布",
+            "幾何分布"
+          ],
+          "answerIndex": 1,
+          "explanation": "ポアソン分布は一定時間内の発生回数、指数分布は次の発生までの待ち時間を表す。",
+          "tags": [
+            "s04_u05",
+            "指数分布",
+            "ポアソン過程"
+          ],
+          "unitId": "s04_u05",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "幾何分布と指数分布の対応として、最も適切なものはどれか。",
+          "choices": [
+            "どちらも非復元抽出の成功数を表す",
+            "幾何分布は離散的な待ち回数、指数分布は連続的な待ち時間を表す",
+            "幾何分布は連続型、指数分布は離散型である",
+            "どちらも試行回数が固定された成功回数を表す"
+          ],
+          "answerIndex": 1,
+          "explanation": "幾何分布は成功までの試行回数、指数分布は次の発生までの連続的な待ち時間を表す。",
+          "tags": [
+            "s04_u05",
+            "幾何分布",
+            "指数分布",
+            "比較"
+          ],
+          "unitId": "s04_u05",
+          "importance": 2,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "超幾何分布で、母集団の大きさをN、成功数をM、標本サイズをnとするとき、確率変数Xが表すものとして最も適切なものはどれか。",
+          "choices": [
+            "母集団全体の成功割合",
+            "n個を非復元抽出したときの成功数",
+            "初めて成功するまでの試行回数",
+            "一定時間内の発生間隔"
+          ],
+          "answerIndex": 1,
+          "explanation": "超幾何分布では、有限母集団からn個を非復元抽出したときに含まれる成功数Xを考える。",
+          "tags": [
+            "s04_u05",
+            "超幾何分布",
+            "確率変数"
+          ],
+          "unitId": "s04_u05",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "幾何分布について、成功確率pが大きくなると期待される傾向として最も適切なものはどれか。",
+          "choices": [
+            "初めて成功するまでの試行回数は短くなりやすい",
+            "初めて成功するまでの試行回数は長くなりやすい",
+            "成功までの試行回数は必ず1回になる",
+            "分布は超幾何分布に変わる"
+          ],
+          "answerIndex": 0,
+          "explanation": "成功確率pが大きいほど、早い段階で成功しやすくなるため、成功までの試行回数は短くなりやすい。",
+          "tags": [
+            "s04_u05",
+            "幾何分布",
+            "期待値の直観"
+          ],
+          "unitId": "s04_u05",
+          "importance": 2,
+          "difficulty": 2,
+          "isPremium": true
+        },
+        {
+          "question": "指数分布の性質として知られる無記憶性の説明として、最も適切なものはどれか。",
+          "choices": [
+            "過去に待った時間によらず、今後さらに待つ時間の分布が変わらない",
+            "平均と分散が常に等しい",
+            "抽出するたびに母集団の構成が変わる",
+            "標準化すると必ず標準正規分布になる"
+          ],
+          "answerIndex": 0,
+          "explanation": "指数分布の無記憶性とは、すでに待った時間に関係なく、これから待つ時間の分布が同じになる性質である。",
+          "tags": [
+            "s04_u05",
+            "指数分布",
+            "無記憶性"
+          ],
+          "unitId": "s04_u05",
+          "importance": 2,
+          "difficulty": 3,
+          "isPremium": true
+        },
+        {
+          "question": "次のうち、分布の選択として不適切なものはどれか。",
+          "choices": [
+            "不良品が5個含まれる100個から10個を非復元抽出する不良品数に超幾何分布を用いる",
+            "成功確率が一定の独立試行で初成功までの回数に幾何分布を用いる",
+            "ポアソン過程で次の発生までの待ち時間に指数分布を用いる",
+            "非復元抽出で得られる成功数に常にポアソン分布を用いる"
+          ],
+          "answerIndex": 3,
+          "explanation": "非復元抽出で有限母集団中の成功数を数える場合は、通常は超幾何分布を考える。ポアソン分布は一定区間内のまれな事象の発生回数に用いる。",
+          "tags": [
+            "s04_u05",
+            "分布の選択",
+            "適用判断"
+          ],
+          "unitId": "s04_u05",
+          "importance": 1,
+          "difficulty": 3,
+          "isPremium": true
+        }
+      ]
+    }
+  ]
+}

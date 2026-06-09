@@ -6,3 +6,24 @@ s01,1,データの要約（記述統計）,Descriptive Statistics,4,s01_u04,ロ�
 s02,2,データ間の関係,Relationships Between Data,1,s02_u01,散布図と相関（相関係数・共分散）,Scatterplots & Correlation,assets_src/tsv/unit_s02_u01.tsv,active
 s02,2,データ間の関係,Relationships Between Data,2,s02_u02,カテゴリカルデータの要約（クロス集計・割合の比較）,Categorical Data,assets_src/tsv/unit_s02_u02.tsv,active
 s02,2,データ間の関係,Relationships Between Data,3,s02_u03,独立性の直観（期待度数の発想まで）,Independence Intuition,assets_src/tsv/unit_s02_u03.tsv,active
+s03,3,確率,Probability,1,s03_u01,確率の基本（加法・乗法・余事象）,Fundamentals of Probability,assets_src/tsv/unit_s03_u01.tsv,active
+s03,3,確率,Probability,2,s03_u02,条件付き確率と独立,Conditional Probability & Independence,assets_src/tsv/unit_s03_u02.tsv,active
+s03,3,確率,Probability,3,s03_u03,ベイズの定理（典型パターン）,Bayes’ Theorem,assets_src/tsv/unit_s03_u03.tsv,active
+s04,4,確率分布,Probability Distributions,1,s04_u01,確率変数・期待値・分散（線形性）,Random Variables / E & Var,assets_src/tsv/unit_s04_u01.tsv,active
+s04,4,確率分布,Probability Distributions,2,s04_u02,ベルヌーイ・二項分布,Bernoulli & Binomial Distributions,assets_src/tsv/unit_s04_u02.tsv,active
+s04,4,確率分布,Probability Distributions,3,s04_u03,ポアソン分布と適用判断,Poisson Distribution,assets_src/tsv/unit_s04_u03.tsv,active
+s04,4,確率分布,Probability Distributions,4,s04_u04,正規分布と標準化（表の読み取り）,Normal Distribution & Standardization,assets_src/tsv/unit_s04_u04.tsv,active
+s04,4,確率分布,Probability Distributions,5,s04_u05,その他の分布（超幾何・幾何・指数など）,Other Distributions,assets_src/tsv/unit_s04_u05.tsv,active
+s05,5,標本分布,Sampling Distributions,1,s05_u01,標本平均・標本比率の分布（標準誤差）,Sampling Distributions,assets_src/tsv/unit_s05_u01.tsv,active
+s05,5,標本分布,Sampling Distributions,2,s05_u02,近似と中心極限定理（正規近似を含む）,Approximations & CLT,assets_src/tsv/unit_s05_u02.tsv,active
+s05,5,標本分布,Sampling Distributions,3,s05_u03,t分布・χ²分布・F分布（用途と表の読み）,t / Chi-square / F Distributions,assets_src/tsv/unit_s05_u03.tsv,active
+s06,6,推定,Estimation,1,s06_u01,推定量の性質（不偏・一致など）,Properties of Estimators,assets_src/tsv/unit_s06_u01.tsv,active
+s06,6,推定,Estimation,2,s06_u02,1母数の区間推定（平均・比率・分散）,Confidence Intervals for One Population,assets_src/tsv/unit_s06_u02.tsv,active
+s06,6,推定,Estimation,3,s06_u03,2母数の区間推定（差・比：判断重視）,Confidence Intervals for Two Populations,assets_src/tsv/unit_s06_u03.tsv,active
+s07,7,仮説検定,Hypothesis Testing,1,s07_u01,仮説検定の枠組み（H0/H1・片側/両側）,Hypothesis Testing Framework,assets_src/tsv/unit_s07_u01.tsv,active
+s07,7,仮説検定,Hypothesis Testing,2,s07_u02,p値と過誤（第1種・第2種・検出力の概念）,p-values & Errors,assets_src/tsv/unit_s07_u02.tsv,active
+s07,7,仮説検定,Hypothesis Testing,3,s07_u03,1母数の検定（平均・比率・分散）,Tests for One Population,assets_src/tsv/unit_s07_u03.tsv,active
+s07,7,仮説検定,Hypothesis Testing,4,s07_u04,2母数の検定（平均差・比率差・等分散性）,Tests for Two Populations,assets_src/tsv/unit_s07_u04.tsv,active
+s08,8,線形モデルと実験,Linear Models and Experiments,1,s08_u01,単回帰の基礎（最小二乗・予測・R²）,Simple Linear Regression Basics,assets_src/tsv/unit_s08_u01.tsv,active
+s08,8,線形モデルと実験,Linear Models and Experiments,2,s08_u02,回帰出力の読み取り（係数/t/p/調整R²）,Interpreting Regression Output,assets_src/tsv/unit_s08_u02.tsv,active
+s08,8,線形モデルと実験,Linear Models and Experiments,3,s08_u03,実験計画と分散分析（フィッシャー原則・ANOVA表）,Experimental Design & ANOVA,assets_src/tsv/unit_s08_u03.tsv,active

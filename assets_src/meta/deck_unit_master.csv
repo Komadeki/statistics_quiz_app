@@ -1,2 +1,5 @@
 deck_id,deck_no,deck_title,deck_subtitle,unit_no,unit_id,unit_title_japanese,unit_title_english,source_tsv,status
 s01,1,データの要約（記述統計）,Descriptive Statistics,1,s01_u01,1変数データの要約（代表値・散布度）,Central Tendency & Dispersion,assets_src/tsv/unit_s01_u01.tsv,active
+s01,1,データの要約（記述統計）,Descriptive Statistics,2,s01_u02,分布の可視化と読み取り（ヒスト・箱ひげ・外れ値）,Visualizing & Reading Distributions,assets_src/tsv/unit_s01_u02.tsv,active
+s01,1,データの要約（記述統計）,Descriptive Statistics,3,s01_u03,標準化と比較（z得点・偏差値・変動係数）,Standardization & Comparison,assets_src/tsv/unit_s01_u03.tsv,active
+s01,1,データの要約（記述統計）,Descriptive Statistics,4,s01_u04,ローレンツ曲線とジニ係数,Lorenz Curve & Gini Coefficient,assets_src/tsv/unit_s01_u04.tsv,active

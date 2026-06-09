@@ -8,7 +8,11 @@ class QuizCard {
   final String? explanation; // 解説（任意）
   final bool isPremium; // 有料かどうか
   final List<String> unitTags; // 分野タグ（複数可）
-  final String? unitId; // ★追加：所属ユニットID（任意・後方互換）
+  final String? unitId; // 所属ユニットID（任意・後方互換）
+
+  // 統計検定2級アプリ用メタデータ
+  final int importance; // 1=最重要, 2=重要, 3=補助
+  final int difficulty; // 1=基礎, 2=標準, 3=応用
 
   const QuizCard({
     required this.question,
@@ -17,7 +21,9 @@ class QuizCard {
     this.explanation,
     this.isPremium = false,
     this.unitTags = const [],
-    this.unitId, // ★追加
+    this.unitId,
+    this.importance = 2,
+    this.difficulty = 2,
   });
 
   QuizCard copyWith({
@@ -28,6 +34,8 @@ class QuizCard {
     bool? isPremium,
     List<String>? unitTags,
     String? unitId,
+    int? importance,
+    int? difficulty,
   }) {
     return QuizCard(
       question: question ?? this.question,
@@ -37,6 +45,8 @@ class QuizCard {
       isPremium: isPremium ?? this.isPremium,
       unitTags: unitTags ?? this.unitTags,
       unitId: unitId ?? this.unitId,
+      importance: importance ?? this.importance,
+      difficulty: difficulty ?? this.difficulty,
     );
   }
 
@@ -47,27 +57,40 @@ class QuizCard {
     List<String> readTags(Map<String, dynamic> j) {
       final raw = j['unitTags'] ?? j['tags'] ?? j['tag'] ?? j['tag_list'];
       if (raw is List) {
-        return raw
-            .map((e) => e.toString().trim())
-            .where((e) => e.isNotEmpty)
-            .toList();
+        return raw.map((e) => e.toString().trim()).where((e) => e.isNotEmpty).toList();
       }
       if (raw is String) {
-        return raw
-            .split(',')
-            .map((e) => e.trim())
-            .where((e) => e.isNotEmpty)
-            .toList();
+        return raw.split(',').map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
       }
       return const <String>[];
     }
 
-    // ❗ final を外して通常のローカル関数に
     String? readUnitId(Map<String, dynamic> j) {
       final u = j['unitId'] ?? j['unit_id'];
       if (u == null) return null;
       final s = u.toString().trim();
       return s.isEmpty ? null : s;
+    }
+
+    int readIntMeta(
+      Map<String, dynamic> j,
+      String key, {
+      required int fallback,
+      int min = 1,
+      int max = 3,
+    }) {
+      final raw = j[key];
+      int? value;
+
+      if (raw is int) {
+        value = raw;
+      } else if (raw is num) {
+        value = raw.toInt();
+      } else if (raw is String) {
+        value = int.tryParse(raw.trim());
+      }
+
+      return (value ?? fallback).clamp(min, max);
     }
 
     return QuizCard(
@@ -77,7 +100,9 @@ class QuizCard {
       explanation: json['explanation'] as String?,
       isPremium: json['isPremium'] as bool? ?? false,
       unitTags: readTags(json),
-      unitId: readUnitId(json), // ← ここはそのままでOK
+      unitId: readUnitId(json),
+      importance: readIntMeta(json, 'importance', fallback: 2),
+      difficulty: readIntMeta(json, 'difficulty', fallback: 2),
     );
   }
 
@@ -88,6 +113,45 @@ class QuizCard {
       if (i == null) return '';
       final v = row[i];
       return (v == null) ? '' : v.toString().trim();
+    }
+
+    int readIntFromRow(
+      String key, {
+      required int fallback,
+      int min = 1,
+      int max = 3,
+    }) {
+      if (!idx.containsKey(key)) return fallback;
+      final parsed = int.tryParse(s(key));
+      return (parsed ?? fallback).clamp(min, max);
+    }
+
+    List<String> readTagsFromRow() {
+      if (!idx.containsKey('tags')) return const <String>[];
+      final raw = s('tags');
+      if (raw.isEmpty) return const <String>[];
+
+      return raw.split(',').map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
+    }
+
+    bool readIsPremiumFromRow() {
+      if (idx.containsKey('isPremium')) {
+        final raw = s('isPremium').toLowerCase();
+        return raw == 'true' || raw == '1' || raw == 'yes';
+      }
+
+      if (idx.containsKey('is_premium')) {
+        final raw = s('is_premium').toLowerCase();
+        return raw == 'true' || raw == '1' || raw == 'yes';
+      }
+
+      if (idx.containsKey('is_free')) {
+        final raw = s('is_free').toLowerCase();
+        final isFree = raw == 'true' || raw == '1' || raw == 'yes';
+        return !isFree;
+      }
+
+      return false;
     }
 
     final c1 = s('choice1');
@@ -102,7 +166,6 @@ class QuizCard {
     var ans = int.tryParse(ansRaw) ?? 1;
     ans = (ans - 1).clamp(0, list.length - 1); // 1→0, 4→3 など
 
-    // ★ テンプレ列に合わせて unit_id を拾う（無ければ null）
     final uid = idx.containsKey('unit_id') ? s('unit_id') : null;
 
     return QuizCard(
@@ -110,7 +173,11 @@ class QuizCard {
       choices: list,
       answerIndex: ans,
       explanation: (exp != null && exp.isEmpty) ? null : exp,
-      unitId: (uid != null && uid.isEmpty) ? null : uid, // ★追加
+      isPremium: readIsPremiumFromRow(),
+      unitTags: readTagsFromRow(),
+      unitId: (uid != null && uid.isEmpty) ? null : uid,
+      importance: readIntFromRow('importance', fallback: 2),
+      difficulty: readIntFromRow('difficulty', fallback: 2),
     );
   }
 }
@@ -122,8 +189,10 @@ extension QuizCardShuffle on QuizCard {
     if (randomize) {
       pairs.shuffle(rnd ?? Random());
     }
+
     final newChoices = pairs.map((e) => e.value).toList(growable: false);
     final newAnswerIndex = pairs.indexWhere((e) => e.key == answerIndex);
+
     return QuizCard(
       question: question,
       choices: newChoices,
@@ -131,7 +200,9 @@ extension QuizCardShuffle on QuizCard {
       explanation: explanation,
       isPremium: isPremium,
       unitTags: unitTags,
-      unitId: unitId, // ★維持
+      unitId: unitId,
+      importance: importance,
+      difficulty: difficulty,
     );
   }
 }

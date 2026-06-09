@@ -6,6 +6,7 @@ import '../services/deck_loader.dart';
 
 // ★ DEV向け Fake IAP フラグ（起動時に --dart-define=USE_FAKE_IAP=true）
 const bool kUseFakeIap = bool.fromEnvironment('USE_FAKE_IAP', defaultValue: false);
+const bool kShowFivePack = false;
 
 // ★ Fake価格（検証用）
 const Map<String, String> _kFakePrices = {
@@ -576,19 +577,20 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
               const ListTile(title: Text('アプリ内購入')),
 
               // 単元（デッキ）
-              _deckTile(deckId: 's01', title: '現代社会と健康（上）'),
-              _deckTile(deckId: 's02', title: '現代社会と健康（中）'),
-              _deckTile(deckId: 's03', title: '現代社会と健康（下）'),
-              _deckTile(deckId: 's04', title: '安全な社会生活'),
-              _deckTile(deckId: 's05', title: '生涯を通じる健康（前半）'),
-              _deckTile(deckId: 's06', title: '生涯を通じる健康（後半）'),
-              _deckTile(deckId: 's07', title: '健康を支える環境づくり（前半）'),
-              _deckTile(deckId: 's08', title: '健康を支える環境づくり（後半）'),
+              _deckTile(deckId: 's01', title: 'データの要約（記述統計）'),
+              _deckTile(deckId: 's02', title: 'データ間の関係'),
+              _deckTile(deckId: 's03', title: '確率'),
+              _deckTile(deckId: 's04', title: '確率分布'),
+              _deckTile(deckId: 's05', title: '標本分布'),
+              _deckTile(deckId: 's06', title: '推定'),
+              _deckTile(deckId: 's07', title: '仮説検定'),
+              _deckTile(deckId: 's08', title: '線形モデルと実験'),
 
-              const Divider(),
+              if (kShowFivePack) ...[
+                const Divider(),
 
-              // 5単元パック（状態付き表示）
-              FutureBuilder<bool>(
+                // 5単元パック（状態付き表示）
+                FutureBuilder<bool>(
                 future: PurchaseStore.isFivePackOwned(),
                 builder: (context, snap) {
                   final fiveOwned = (snap.data ?? false) || owned5;
@@ -657,7 +659,8 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                 ),
               ),
 
-              const Divider(),
+                const Divider(),
+              ],
 
               // 全単元フル解放（表示判定は「全解放SKU購入」or「個別/5パックで全デッキ解放済」）
               Builder(

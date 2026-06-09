@@ -730,7 +730,7 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                 ),
                 title: Row(
                   children: [
-                    Expanded(child: Text(ownedPro ? 'Pro' : 'Proアップグレード（学習サポート強化）')),
+                    Expanded(child: Text(ownedPro ? 'Pro機能 有効' : 'Pro機能')),
                     if (ownedPro) _purchasedChip(),
                   ],
                 ),
@@ -738,19 +738,15 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(ownedPro ? '購入済' : _safePrice('pro_upgrade')),
-                    const SizedBox(height: 2),
+                    const SizedBox(height: 4),
                     const Text(
-                      '復習モードの全開放',
+                      '間違えた問題を効率よく復習するための機能を解放します。',
                       style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
                     ),
-                    const Text(
-                      '・復習リマインダーで自動通知（1日後／3日後など）',
-                      style: TextStyle(fontSize: 12),
-                    ),
-                    const Text(
-                      '・見直し／復習テストで苦手を重点練習',
-                      style: TextStyle(fontSize: 12),
-                    ),
+                    const SizedBox(height: 4),
+                    const Text('・見直しモード', style: TextStyle(fontSize: 12)),
+                    const Text('・復習テストモード', style: TextStyle(fontSize: 12)),
+                    const Text('・復習リマインダー', style: TextStyle(fontSize: 12)),
                   ],
                 ),
                 trailing: (ownedPro || (busy && _pendingProductId == 'pro_upgrade'))

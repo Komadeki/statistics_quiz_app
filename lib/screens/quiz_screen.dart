@@ -65,6 +65,12 @@ class _QuizScreenState extends State<QuizScreen> {
   final Map<String, int> _tagWrong = {};
   final Map<String, int> _unitCount = {};
 
+  // 重要度・難易度別集計用
+  final Map<int, int> _importanceCorrect = {};
+  final Map<int, int> _importanceWrong = {};
+  final Map<int, int> _difficultyCorrect = {};
+  final Map<int, int> _difficultyWrong = {};
+
   // 復元用：安定ID → 元カード
   late Map<String, QuizCard> _id2card;
 
@@ -103,6 +109,42 @@ class _QuizScreenState extends State<QuizScreen> {
         _tagWrong[t] = (_tagWrong[t] ?? 0) + 1;
       }
     }
+  }
+
+  int _normalizeMetaValue(int value) {
+    if (value < 1) return 1;
+    if (value > 3) return 3;
+    return value;
+  }
+
+  void _bumpIntCounter(Map<int, int> map, int key) {
+    map[key] = (map[key] ?? 0) + 1;
+  }
+
+  void _bumpMeta(QuizCard card, bool isCorrect) {
+    final importance = _normalizeMetaValue(card.importance);
+    final difficulty = _normalizeMetaValue(card.difficulty);
+
+    if (isCorrect) {
+      _bumpIntCounter(_importanceCorrect, importance);
+      _bumpIntCounter(_difficultyCorrect, difficulty);
+    } else {
+      _bumpIntCounter(_importanceWrong, importance);
+      _bumpIntCounter(_difficultyWrong, difficulty);
+    }
+  }
+
+  Map<int, TagStat> _buildMetaStats(
+    Map<int, int> correctMap,
+    Map<int, int> wrongMap,
+  ) {
+    return {
+      for (final key in const [1, 2, 3])
+        key: TagStat(
+          correct: correctMap[key] ?? 0,
+          wrong: wrongMap[key] ?? 0,
+        ),
+    };
   }
 
   QuizCard get card => sequence[index];
@@ -637,6 +679,7 @@ class _QuizScreenState extends State<QuizScreen> {
       if (selected == card.answerIndex) correctCount++;
       final isCorrect = selected == card.answerIndex;
       _bumpTags(card.tags, isCorrect);
+      _bumpMeta(card, isCorrect);
 
       // 1) 問題単位の Attempt 保存
       try {
@@ -771,6 +814,16 @@ class _QuizScreenState extends State<QuizScreen> {
           tagStats[k] = TagStat(correct: _tagCorrect[k] ?? 0, wrong: _tagWrong[k] ?? 0);
         }
 
+        final importanceStats = _buildMetaStats(
+          _importanceCorrect,
+          _importanceWrong,
+        );
+
+        final difficultyStats = _buildMetaStats(
+          _difficultyCorrect,
+          _difficultyWrong,
+        );
+
         // スコア保存
         try {
           debugPrint('[SCORE] save sid=$_sessionId total=${sequence.length} correct=$correctCount');
@@ -826,6 +879,8 @@ class _QuizScreenState extends State<QuizScreen> {
               deckTitle: titleForScore, // ← ここを反映
               durationSec: durationSec,
               unitTitleMap: unitTitleMap,
+              importanceStats: importanceStats,
+              difficultyStats: difficultyStats,
             ),
           ),
         );

@@ -27,6 +27,8 @@ class ResultScreen extends StatefulWidget {
   final int? timestamp;
   final List<String>? selectedUnitIds;
   final Map<String, TagStat>? tags;
+  final Map<int, TagStat>? importanceStats;
+  final Map<int, TagStat>? difficultyStats;
   final bool saveHistory;
 
   // 表示関連
@@ -48,6 +50,8 @@ class ResultScreen extends StatefulWidget {
     this.timestamp,
     this.selectedUnitIds,
     this.tags,
+    this.importanceStats,
+    this.difficultyStats,
     this.saveHistory = true,
     this.unitTitleMap,
     this.initialMax = 10,
@@ -160,6 +164,30 @@ class _ResultScreenState extends State<ResultScreen> {
 
             // スコアヘッダ
             _scoreHeader(context, total: total, correct: correct, wrong: wrong),
+
+            const SizedBox(height: 12),
+
+            _MetadataBreakdownCard(
+              title: '重要度別',
+              stats: widget.importanceStats,
+              labels: const {
+                1: '最重要',
+                2: '重要',
+                3: '補助',
+              },
+            ),
+
+            const SizedBox(height: 12),
+
+            _MetadataBreakdownCard(
+              title: '難易度別',
+              stats: widget.difficultyStats,
+              labels: const {
+                1: '基礎',
+                2: '標準',
+                3: '応用',
+              },
+            ),
 
             const SizedBox(height: 16),
 
@@ -358,6 +386,112 @@ class _ResultScreenState extends State<ResultScreen> {
     final m = secs ~/ 60;
     final s = secs % 60;
     return '$m分$s秒';
+  }
+}
+
+class _MetadataBreakdownCard extends StatelessWidget {
+  final String title;
+  final Map<int, TagStat>? stats;
+  final Map<int, String> labels;
+
+  const _MetadataBreakdownCard({
+    required this.title,
+    required this.stats,
+    required this.labels,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final s = stats;
+    if (s == null || s.isEmpty) return const SizedBox.shrink();
+
+    final entries = labels.entries
+        .map((entry) {
+          final stat = s[entry.key] ?? const TagStat(correct: 0, wrong: 0);
+          final total = stat.correct + stat.wrong;
+          return (
+            key: entry.key,
+            label: entry.value,
+            correct: stat.correct,
+            wrong: stat.wrong,
+            total: total,
+          );
+        })
+        .where((e) => e.total > 0)
+        .toList();
+
+    if (entries.isEmpty) return const SizedBox.shrink();
+
+    return Card(
+      elevation: 1,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(12, 12, 12, 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 10),
+            for (final e in entries)
+              _row(
+                context,
+                e.label,
+                e.correct,
+                e.total,
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _row(
+    BuildContext context,
+    String label,
+    int correct,
+    int total,
+  ) {
+    final rate = total == 0 ? 0.0 : correct / total;
+    final percent = (rate * 100).toStringAsFixed(0);
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  label,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+              Text(
+                '$correct / $total（$percent%）',
+                style: const TextStyle(fontSize: 13),
+              ),
+            ],
+          ),
+          const SizedBox(height: 6),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(6),
+            child: LinearProgressIndicator(
+              value: rate.clamp(0, 1),
+              minHeight: 8,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 

@@ -3,3 +3,6 @@ s01,1,データの要約（記述統計）,Descriptive Statistics,1,s01_u01,1変
 s01,1,データの要約（記述統計）,Descriptive Statistics,2,s01_u02,分布の可視化と読み取り（ヒスト・箱ひげ・外れ値）,Visualizing & Reading Distributions,assets_src/tsv/unit_s01_u02.tsv,active
 s01,1,データの要約（記述統計）,Descriptive Statistics,3,s01_u03,標準化と比較（z得点・偏差値・変動係数）,Standardization & Comparison,assets_src/tsv/unit_s01_u03.tsv,active
 s01,1,データの要約（記述統計）,Descriptive Statistics,4,s01_u04,ローレンツ曲線とジニ係数,Lorenz Curve & Gini Coefficient,assets_src/tsv/unit_s01_u04.tsv,active
+s02,2,データ間の関係,Relationships Between Data,1,s02_u01,散布図と相関（相関係数・共分散）,Scatterplots & Correlation,assets_src/tsv/unit_s02_u01.tsv,active
+s02,2,データ間の関係,Relationships Between Data,2,s02_u02,カテゴリカルデータの要約（クロス集計・割合の比較）,Categorical Data,assets_src/tsv/unit_s02_u02.tsv,active
+s02,2,データ間の関係,Relationships Between Data,3,s02_u03,独立性の直観（期待度数の発想まで）,Independence Intuition,assets_src/tsv/unit_s02_u03.tsv,active

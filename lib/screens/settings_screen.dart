@@ -161,7 +161,7 @@ class SettingsScreen extends StatelessWidget {
 
       // ★ あなたのフォーム（/e/.../viewform?usp=pp_url）
       const base =
-          'https://docs.google.com/forms/d/e/1FAIpQLScnTXDqyc_usBF4tsAvJSuU4GolMPn30iWceCGOwdno9g0Z1w/viewform?usp=pp_url';
+          'https://docs.google.com/forms/d/e/1FAIpQLSe0FkDTtepvunykIzH7L3HqCT5Gh8pDuHNERYvBbKXNiUlrPQ/viewform?usp=header';
 
       // ★ entry 番号の対応：version=1462985917, build=1437804280, model=1596802257, os=1457215898
       final url = Uri.parse(

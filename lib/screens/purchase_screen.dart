@@ -10,17 +10,17 @@ const bool kShowFivePack = false;
 
 // ★ Fake価格（検証用）
 const Map<String, String> _kFakePrices = {
-  'pro_upgrade': '¥300',
-  'bundle_all_unlock': '¥980',
+  'stat_pro_upgrade': '¥700',
+  'stat_bundle_all_unlock': '¥1000',
   'bundle_5decks_unlock': '¥600',
-  's01_unlock': '¥160',
-  's02_unlock': '¥160',
-  's03_unlock': '¥160',
-  's04_unlock': '¥160',
-  's05_unlock': '¥160',
-  's06_unlock': '¥160',
-  's07_unlock': '¥160',
-  's08_unlock': '¥160',
+  's01_unlock': '¥200',
+  's02_unlock': '¥200',
+  's03_unlock': '¥200',
+  's04_unlock': '¥200',
+  's05_unlock': '¥200',
+  's06_unlock': '¥200',
+  's07_unlock': '¥200',
+  's08_unlock': '¥200',
 };
 
 class PurchaseScreen extends StatefulWidget {
@@ -247,9 +247,9 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
   }
 
   String _successText(String productId) {
-    if (productId == 'bundle_all_unlock') return '全単元が解放されました';
+    if (productId == 'stat_bundle_all_unlock') return '全単元が解放されました';
     if (productId == 'bundle_5decks_unlock') return '5単元パックが解放されました';
-    if (productId == 'pro_upgrade') return 'Pro機能が有効になりました';
+    if (productId == 'stat_pro_upgrade') return 'Pro機能が有効になりました';
     if (productId.endsWith('_unlock')) return '対象の単元が解放されました';
     return '購入が反映されました';
   }
@@ -287,11 +287,11 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
 
   // —— Fake: ローカル付与ロジック —— //
   Future<void> _grantLocally(String productId) async {
-    if (productId == 'pro_upgrade') {
+    if (productId == 'stat_pro_upgrade') {
       await PurchaseStore.setPro(true);
       return;
     }
-    if (productId == 'bundle_all_unlock') {
+    if (productId == 'stat_bundle_all_unlock') {
       await PurchaseStore.addOwnedDecks([
         's01',
         's02',
@@ -551,8 +551,8 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
     }
 
     final owned5 = iap.isOwnedProduct('bundle_5decks_unlock');
-    final ownedAll = iap.isOwnedProduct('bundle_all_unlock');
-    final ownedPro = iap.isOwnedProduct('pro_upgrade') || isProLegacy;
+    final ownedAll = iap.isOwnedProduct('stat_bundle_all_unlock');
+    final ownedPro = iap.isOwnedProduct('stat_pro_upgrade') || isProLegacy;
 
     // ★ 全デッキのアクセシビリティを算出（個別所有/Pro ∪ 5パック選択）
     const allDeckIds = [
@@ -699,7 +699,7 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                             ? '購入済'
                             : (allCoveredByDecks
                                 ? 'すべて解放済（購入不要）'
-                                : _safePrice('bundle_all_unlock'))),
+                                : _safePrice('stat_bundle_all_unlock'))),
                         const SizedBox(height: 2),
                         const Text(
                           'すべての単元が勉強し放題。',
@@ -717,9 +717,9 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                     // ボタンは SKU購入済 or 積み上げで全解放済 なら非表示
                     trailing: (ownedAllSku ||
                             allCoveredByDecks ||
-                            (busy && _pendingProductId == 'bundle_all_unlock'))
+                            (busy && _pendingProductId == 'stat_bundle_all_unlock'))
                         ? null
-                        : _buyButton('bundle_all_unlock'),
+                        : _buyButton('stat_bundle_all_unlock'),
                   );
                 },
               ),
@@ -740,7 +740,7 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                 subtitle: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(ownedPro ? '購入済' : _safePrice('pro_upgrade')),
+                    Text(ownedPro ? '購入済' : _safePrice('stat_pro_upgrade')),
                     const SizedBox(height: 4),
                     const Text(
                       '間違えた問題を効率よく復習するための機能を解放します。',
@@ -752,9 +752,9 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                     const Text('・復習リマインダー', style: TextStyle(fontSize: 12)),
                   ],
                 ),
-                trailing: (ownedPro || (busy && _pendingProductId == 'pro_upgrade'))
+                trailing: (ownedPro || (busy && _pendingProductId == 'stat_pro_upgrade'))
                     ? null
-                    : _buyButton('pro_upgrade'),
+                    : _buyButton('stat_pro_upgrade'),
               ),
 
               const SizedBox(height: 8),

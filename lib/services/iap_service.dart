@@ -23,8 +23,8 @@ class ProductCatalog {
 
   // セット/全体/Pro
   static const bundle5 = 'bundle_5decks_unlock'; // ← SKU名は既存どおり
-  static const bundleAll = 'bundle_all_unlock';
-  static const pro = 'pro_upgrade';
+  static const bundleAll = 'stat_bundle_all_unlock';
+  static const pro = 'stat_pro_upgrade';
 
   // まとめ
   static const bundles = [bundle5, bundleAll];

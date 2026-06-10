@@ -217,7 +217,7 @@ class _HomeScreenState extends State<HomeScreen> {
     }
     if (!mounted) return;
     setState(() {
-      _ownedPro = iap.isOwnedProduct('pro_upgrade') || legacy;
+      _ownedPro = iap.isOwnedProduct('stat_pro_upgrade') || legacy;
     });
   }
 

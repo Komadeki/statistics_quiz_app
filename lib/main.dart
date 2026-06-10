@@ -87,6 +87,7 @@ class MyApp extends StatelessWidget {
     final s = context.watch<AppSettings>();
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       navigatorKey: NavService.I.navigatorKey, // ★ これを追加！
       title: '統計検定2級対策 一問一答',
       locale: const Locale('ja', 'JP'),

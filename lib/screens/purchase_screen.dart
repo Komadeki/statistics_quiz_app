@@ -569,7 +569,7 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
     final allAccessible = accessibleCount == allDeckIds.length;
 
     return Scaffold(
-      appBar: AppBar(title: Text('購入${kUseFakeIap ? '（テストモード）' : ''}')),
+      appBar: AppBar(title: const Text('購入')),
       body: Stack(
         children: [
           ListView(

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../services/reminder_service.dart';
+import '../services/gate.dart';
 import 'review_cards_screen.dart';
 import 'review_test_setup_screen.dart';
+import 'purchase_screen.dart';
 import '../widgets/review_reminder_card.dart';
 
 class ReviewMenuScreen extends StatefulWidget {
@@ -44,7 +46,30 @@ class _ReviewMenuScreenState extends State<ReviewMenuScreen> {
     await prefs.setString('reminderFrequency', _reminderFrequency);
   }
 
+  Future<bool> _ensureProFeature(String featureKey) async {
+    final ok = await Gate.canUseFeature(featureKey);
+    if (ok) return true;
+
+    if (!mounted) return false;
+
+    final result = await Navigator.push<bool>(
+      context,
+      MaterialPageRoute(builder: (_) => const PurchaseScreen()),
+    );
+
+    if (result == true) {
+      return Gate.canUseFeature(featureKey);
+    }
+
+    return false;
+  }
+
   Future<void> _toggleReminder(bool value) async {
+    if (value) {
+      final ok = await _ensureProFeature('reminder');
+      if (!ok) return;
+    }
+
     setState(() => _reminderEnabled = value);
     await _saveReminderSettings();
 
@@ -283,20 +308,30 @@ class _ReviewMenuScreenState extends State<ReviewMenuScreen> {
             icon: Icons.style_outlined,
             title: '見直しモード',
             description: 'これまでに間違えた問題カードを1枚ずつめくりながら復習します。',
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) => const ReviewCardsScreen()),
-            ),
+            onTap: () async {
+              final ok = await _ensureProFeature('review_cards');
+              if (!ok || !context.mounted) return;
+
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const ReviewCardsScreen()),
+              );
+            },
           ),
           const SizedBox(height: 18),
           _buildModeCard(
             icon: Icons.quiz_outlined,
             title: '復習テストモード',
             description: '誤答の多い問題を自動で選び、苦手を集中的に確認します。',
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) => const ReviewTestSetupScreen()),
-            ),
+            onTap: () async {
+              final ok = await _ensureProFeature('review_test');
+              if (!ok || !context.mounted) return;
+
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const ReviewTestSetupScreen()),
+              );
+            },
           ),
           const SizedBox(height: 18),
           // 🟢 新規追加

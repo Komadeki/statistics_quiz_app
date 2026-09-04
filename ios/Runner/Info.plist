@@ -14,6 +14,10 @@
 		<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 		<key>CFBundleInfoDictionaryVersion</key>
 		<string>6.0</string>
+		<key>CFBundleLocalizations</key>
+		<array>
+			<string>ja</string>
+		</array>
 		<key>CFBundleName</key>
 		<string>統計検定2級対策</string>
 		<key>CFBundlePackageType</key>

@@ -746,7 +746,11 @@ class _MultiSelectScreenState extends State<MultiSelectScreen> {
               child: FilledButton(
                 onPressed: canStart ? _startQuiz : null,
                 child: Text(
-                  hasSelection ? 'この選択で開始（$_startCount問）' : 'ユニットを選択してください',
+                  !hasSelection
+                      ? 'ユニットを選択してください'
+                      : _hasOnlyPremiumForCurrentMode
+                          ? '全問題解放で利用できます'
+                          : 'この選択で開始（$_startCount問）',
                 ),
               ),
             ),
